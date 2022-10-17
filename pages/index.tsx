@@ -47,6 +47,8 @@ const Home: NextPage<PageProps> = ({ handleThemeIndex }) => {
     <>
       <Head>
         <title>home</title>
+        <meta name="description" content="Michele De Cillis's website" />
+        <meta name="author" content="Michele De Cillis" />
       </Head>
 
       <styled.Container>
