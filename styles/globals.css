@@ -17,8 +17,6 @@ button {
   padding: 0;
   padding: 0;
 
-  cursor: pointer;
-
   color: inherit;
 }
 
@@ -33,5 +31,16 @@ a[target="_blank"]::after {
 @media (max-width: 992px) {
   a[target="_blank"]::after {
     content: "↗";
+  }
+}
+
+/*
+ * inverted custom cursor
+ */
+@media screen and (min-width: 992px) {
+  * {
+    cursor: none;
+    margin: 0;
+    padding: 0;
   }
 }
