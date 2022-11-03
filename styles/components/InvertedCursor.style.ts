@@ -7,13 +7,17 @@ export const Container = styled.div`
     z-index: 999;
     top: var(--y, -100px);
     left: var(--x, -100px);
+
     width: 2em;
     height: 2em;
-    border-radius: 50%;
-    transform: translate(-50%, -50%) scale(0.45);
+
     background: #fff;
+    border-radius: 50%;
     mix-blend-mode: difference;
-    transition: 0.3s ease-in transform;
+
+    transition: 0.3s ease-in scale;
+    transform: translate(-50%, -50%);
+    scale: 0.45;
 
     pointer-events: none;
   }

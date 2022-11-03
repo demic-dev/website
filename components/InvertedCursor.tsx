@@ -11,13 +11,13 @@ function handleMouseMove(this: Document, e: globalThis.MouseEvent) {
 function handleMouseEnter() {
   const cursorElement = document?.getElementById("inverted-cursor");
 
-  cursorElement?.style.setProperty("transform", "scale(1)");
+  cursorElement?.style.setProperty("scale", "1");
 }
 
 function handleMouseLeave() {
   const cursorElement = document?.getElementById("inverted-cursor");
 
-  cursorElement?.style.setProperty("transform", "scale(0.45)");
+  cursorElement?.style.setProperty("scale", "0.45");
 }
 
 const InvertedCursor = () => {
