@@ -6,6 +6,10 @@ export const HEADER_LINKS: ILink[] = [
     value: "old site",
     href: "https://demic-portfolio.netlify.app/",
   },
+  {
+    value: "resume",
+    href: "/static/resume.pdf",
+  }
   // {
   //   value: "experiences",
   //   href: "/experiences",
@@ -29,9 +33,14 @@ export const FOOTER_LINKS: ILink[] = [
   },
   {
     newWindow: true,
-    value: "leetcode",
-    href: "https://leetcode.com/demic-dev/",
+    value: "instagram",
+    href: "https://www.instagram.com/micheledecillis/",
   },
+  // {
+  //   newWindow: true,
+  //   value: "leetcode",
+  //   href: "https://leetcode.com/demic-dev/",
+  // },
   {
     newWindow: true,
     value: "email me",
