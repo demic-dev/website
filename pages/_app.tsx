@@ -9,6 +9,7 @@ import { ThemeProvider } from "styled-components";
 import type { PageProps } from "../types/page";
 // utils
 import { GlobalStyles, themes } from "../utils/ThemeConfig";
+import InvertedCursor from "../components/InvertedCursor";
 // #endregion ::: IMPORTS
 
 function MyApp({ Component }: AppProps<PageProps>) {
@@ -26,6 +27,7 @@ function MyApp({ Component }: AppProps<PageProps>) {
   return (
     <ThemeProvider theme={themes[themeIndex]}>
       <GlobalStyles />
+      <InvertedCursor />
       <Component handleThemeIndex={handleThemeIndex} />
     </ThemeProvider>
   );
