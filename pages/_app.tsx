@@ -12,7 +12,7 @@ import { GlobalStyles, themes } from "../utils/ThemeConfig";
 import InvertedCursor from "../components/InvertedCursor";
 // #endregion ::: IMPORTS
 
-function MyApp({ Component }: AppProps<PageProps>) {
+function MyApp({ Component, pageProps }: AppProps<PageProps>) {
   const [themeIndex, setThemeIndex] = useState<number>(0);
 
   const handleThemeIndex = () =>
@@ -28,7 +28,7 @@ function MyApp({ Component }: AppProps<PageProps>) {
     <ThemeProvider theme={themes[themeIndex]}>
       <GlobalStyles />
       <InvertedCursor />
-      <Component handleThemeIndex={handleThemeIndex} />
+      <Component {...pageProps} handleThemeIndex={handleThemeIndex} />
     </ThemeProvider>
   );
 }

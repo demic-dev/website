@@ -7,9 +7,13 @@ export const HEADER_LINKS: ILink[] = [
     href: "https://demic-portfolio.netlify.app/",
   },
   {
+    value: "posts",
+    href: "/posts",
+  },
+  {
     value: "resume",
     href: "/static/resume.pdf",
-  }
+  },
   // {
   //   value: "experiences",
   //   href: "/experiences",
