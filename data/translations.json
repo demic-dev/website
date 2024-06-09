@@ -1,0 +1,112 @@
+{
+    "_app": {
+        "header": {
+            "resume": {
+                "IT": "curriculum",
+                "EN": "resume",
+                "FR": "cv"
+            },
+            "blog": {
+                "IT": "blog",
+                "EN": "blog",
+                "FR": "blog"
+            },
+            "projects": {
+                "IT": "progetti",
+                "EN": "projects",
+                "FR": "projets"
+            },
+            "about me": {
+                "IT": "su di me",
+                "EN": "about me",
+                "FR": "sur moi"
+            }
+        },
+        "footer": {
+            "linkedin": {
+                "IT": "linkedin",
+                "EN": "linkedin",
+                "FR": "linkedin"
+            },
+            "github": {
+                "IT": "github",
+                "EN": "github",
+                "FR": "github"
+            },
+            "email-me": {
+                "IT": "scrivimi",
+                "EN": "email me",
+                "FR": "envoyez moi un email"
+            }
+        }
+    },
+    "/": {
+        "index": {
+            "meta-description": {
+                "IT": "",
+                "EN": "",
+                "FR": ""
+            },
+            "hero": {
+                "IT": "ciao 👋 sono michele ee cillis,\nuno sviluppatore con sede in 🇮🇹",
+                "EN": "hello 👋 i'm michele de cillis,\na developer based in 🇮🇹",
+                "FR": "bonjour 👋 je suis michele de cillis,\nun développeur basé à 🇮🇹"
+            }
+        },
+        "about-me": {
+            "meta-description": {
+                "IT": "",
+                "EN": "",
+                "FR": ""
+            },
+            "title": {
+                "IT": "",
+                "EN": "",
+                "FR": ""
+            },
+            "heading": {
+                "IT": "",
+                "EN": "",
+                "FR": ""
+            }
+        }
+    },
+    "blog": {
+        "index": {
+            "meta-description": {
+                "IT": "",
+                "EN": "",
+                "FR": ""
+            },
+            "title": {
+                "IT": "post",
+                "EN": "posts",
+                "FR": "articles"
+            },
+            "heading": {
+                "IT": "post",
+                "EN": "posts",
+                "FR": "articles"
+            }
+        }
+    },
+    "projects": {
+        "index": {
+            "meta-description": {
+                "IT": "",
+                "EN": "",
+                "FR": ""
+            },
+            "title": {
+                "IT": "progetti",
+                "EN": "projects",
+                "FR": "projets"
+            },
+            "heading": {
+                "IT": "progetti",
+                "EN": "projects",
+                "FR": "projets"
+            }
+        }
+    }
+}

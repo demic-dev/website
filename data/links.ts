@@ -1,23 +1,32 @@
 import { ILink } from "../types/link";
 
+export const HOME_LINK: ILink = {
+  value: "home",
+  href: "/home/"
+}
+
 export const HEADER_LINKS: ILink[] = [
-  {
-    newWindow: true,
-    value: "old site",
-    href: "https://demic-portfolio.netlify.app/",
-  },
+  // {
+  //   newWindow: true,
+  //   value: "old site",
+  //   href: "https://demic-portfolio.netlify.app/",
+  // },
   {
     value: "resume",
     href: "/static/resume.pdf",
-  }
-  // {
-  //   value: "experiences",
-  //   href: "/experiences",
-  // },
-  // {
-  //   value: "projects",
-  //   href: "/projects",
-  // },
+  },
+  {
+    value: "blog",
+    href: "/blog/",
+  },
+  {
+    value: "projects",
+    href: "/projects/",
+  },
+  {
+    value: "about me",
+    href: "/about-me",
+  },
 ];
 
 export const FOOTER_LINKS: ILink[] = [
@@ -31,16 +40,6 @@ export const FOOTER_LINKS: ILink[] = [
     value: "github",
     href: "https://github.com/demic-dev",
   },
-  {
-    newWindow: true,
-    value: "instagram",
-    href: "https://www.instagram.com/micheledecillis/",
-  },
-  // {
-  //   newWindow: true,
-  //   value: "leetcode",
-  //   href: "https://leetcode.com/demic-dev/",
-  // },
   {
     newWindow: true,
     value: "email me",

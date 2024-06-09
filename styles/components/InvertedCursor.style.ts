@@ -8,8 +8,8 @@ export const Container = styled.div`
     top: var(--y, -100px);
     left: var(--x, -100px);
 
-    width: 2em;
-    height: 2em;
+    width: 2.5em;
+    height: 2.5em;
 
     background: #fff;
     border-radius: 50%;
