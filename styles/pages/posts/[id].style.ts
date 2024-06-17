@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-const BodyContainer = styled.div`
+const BodyContainer = styled.main`
   padding: 1rem 2rem;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 `;
 
 export { BodyContainer };
