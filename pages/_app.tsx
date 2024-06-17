@@ -21,12 +21,12 @@ import { GlobalStyles, themes } from "../utils/ThemeConfig";
 // data
 import { HEADER_LINKS } from "../data/links";
 // types
-import { Language } from "../types";
+import { Language } from "../types/language";
 // #endregion ::: IMPORTS
 
 const useBreakpoint = createBreakpoint({ L: 640, S: 350 });
 
-function MyApp({ Component }: AppProps) {
+function MyApp({ Component, pageProps }: AppProps) {
   const [currentLanguage, setCurrentLanguage] = useState<Language>(
     getSelectedLanguage()
   );
@@ -118,7 +118,7 @@ function MyApp({ Component }: AppProps) {
           </styled.HeaderWrapper>
         </header>
 
-        <Component />
+        <Component {...pageProps} />
       </styled.Container>
     </ThemeProvider>
   );

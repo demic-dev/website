@@ -17,7 +17,7 @@ export const HEADER_LINKS: ILink[] = [
   },
   {
     value: "_app.header.blog",
-    href: "/blog/",
+    href: "/posts/",
   },
   {
     value: "_app.header.projects",
