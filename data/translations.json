@@ -2,110 +2,110 @@
     "_app": {
         "header": {
             "resume": {
-                "IT": "curriculum",
-                "EN": "resume",
-                "FR": "cv"
+                "it": "curriculum",
+                "en": "resume",
+                "fr": "cv"
             },
             "blog": {
-                "IT": "blog",
-                "EN": "blog",
-                "FR": "blog"
+                "it": "blog",
+                "en": "blog",
+                "fr": "blog"
             },
             "projects": {
-                "IT": "progetti",
-                "EN": "projects",
-                "FR": "projets"
+                "it": "progetti",
+                "en": "projects",
+                "fr": "projets"
             },
-            "about me": {
-                "IT": "su di me",
-                "EN": "about me",
-                "FR": "sur moi"
-            }
-        },
-        "footer": {
-            "linkedin": {
-                "IT": "linkedin",
-                "EN": "linkedin",
-                "FR": "linkedin"
-            },
-            "github": {
-                "IT": "github",
-                "EN": "github",
-                "FR": "github"
-            },
-            "email-me": {
-                "IT": "scrivimi",
-                "EN": "email me",
-                "FR": "envoyez moi un email"
+            "about-me": {
+                "it": "su di me",
+                "en": "about me",
+                "fr": "sur moi"
             }
         }
     },
     "/": {
         "index": {
             "meta-description": {
-                "IT": "",
-                "EN": "",
-                "FR": ""
+                "it": "",
+                "en": "",
+                "fr": ""
             },
             "hero": {
-                "IT": "ciao 👋 sono michele ee cillis,\nuno sviluppatore con sede in 🇮🇹",
-                "EN": "hello 👋 i'm michele de cillis,\na developer based in 🇮🇹",
-                "FR": "bonjour 👋 je suis michele de cillis,\nun développeur basé à 🇮🇹"
+                "it": "ciao 👋 sono michele de cillis,<br /> uno sviluppatore con sede in 🇮🇹",
+                "en": "hello 👋 i'm michele de cillis,<br /> a developer based in 🇮🇹",
+                "fr": "bonjour 👋 je suis michele de cillis,<br /> un développeur basé en 🇮🇹"
+            },
+            "footer": {
+                "linkedin": {
+                    "it": "linkedin",
+                    "en": "linkedin",
+                    "fr": "linkedin"
+                },
+                "github": {
+                    "it": "github",
+                    "en": "github",
+                    "fr": "github"
+                },
+                "email-me": {
+                    "it": "scrivimi",
+                    "en": "email me",
+                    "fr": "envoyez moi un email"
+                }
             }
         },
         "about-me": {
             "meta-description": {
-                "IT": "",
-                "EN": "",
-                "FR": ""
+                "it": "",
+                "en": "",
+                "fr": ""
             },
             "title": {
-                "IT": "",
-                "EN": "",
-                "FR": ""
+                "it": "su di me",
+                "en": "about me",
+                "fr": "sur moi"
             },
             "heading": {
-                "IT": "",
-                "EN": "",
-                "FR": ""
+                "it": "",
+                "en": "",
+                "fr": ""
             }
         }
     },
     "blog": {
         "index": {
             "meta-description": {
-                "IT": "",
-                "EN": "",
-                "FR": ""
+                "it": "",
+                "en": "",
+                "fr": ""
             },
             "title": {
-                "IT": "post",
-                "EN": "posts",
-                "FR": "articles"
+                "it": "post",
+                "en": "posts",
+                "fr": "articles"
             },
             "heading": {
-                "IT": "post",
-                "EN": "posts",
-                "FR": "articles"
+                "it": "post",
+                "en": "posts",
+                "fr": "articles"
             }
         }
     },
     "projects": {
         "index": {
             "meta-description": {
-                "IT": "",
-                "EN": "",
-                "FR": ""
+                "it": "",
+                "en": "",
+                "fr": ""
             },
             "title": {
-                "IT": "progetti",
-                "EN": "projects",
-                "FR": "projets"
+                "it": "progetti",
+                "en": "projects",
+                "fr": "projets"
             },
             "heading": {
-                "IT": "progetti",
-                "EN": "projects",
-                "FR": "projets"
+                "it": "progetti",
+                "en": "projects",
+                "fr": "projets"
             }
         }
     }

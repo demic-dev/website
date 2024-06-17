@@ -7,6 +7,8 @@ import CustomLink from "../components/CustomLink";
 import type { NextPage } from "next";
 // styles
 import * as styled from "../styles/pages/index.style";
+// utils
+import { getTranslation } from "../utils/translations";
 // data
 import { FOOTER_LINKS } from "../data/links";
 // #endregion ::: IMPORTS
@@ -21,15 +23,20 @@ const Home: NextPage<{}> = () => {
       </Head>
 
       <styled.BodyContainer>
-        <div>
-          hello 👋 i&apos;m michele de cillis,
-          <br />a developer based in 🇮🇹
-        </div>
+        <div
+          dangerouslySetInnerHTML={{ __html: getTranslation("/.index.hero") }}
+        />
       </styled.BodyContainer>
 
       <footer>
         <styled.FooterContainer>
-          {FOOTER_LINKS.map(CustomLink)}
+          {FOOTER_LINKS.map((props) => (
+            <CustomLink
+              {...props}
+              value={getTranslation(props.value)}
+              key={props.value}
+            />
+          ))}
         </styled.FooterContainer>
       </footer>
     </>

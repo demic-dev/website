@@ -7,6 +7,7 @@ import CustomLink from "../components/CustomLink";
 import type { NextPage } from "next";
 // styles
 import * as styled from "../styles/pages/AboutMe.style";
+import { getTranslation } from "../utils/translations";
 // #endregion ::: IMPORTS
 
 const AboutMe: NextPage<{}> = () => {
@@ -19,7 +20,11 @@ const AboutMe: NextPage<{}> = () => {
       </Head>
 
       <styled.BodyContainer>
-        <h1>About me</h1>
+        <h1
+          dangerouslySetInnerHTML={{
+            __html: getTranslation("/.about-me.title"),
+          }}
+        />
         <div>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
           blanditiis natus facere voluptates quis autem ab assumenda repudiandae

@@ -12,19 +12,19 @@ export const HEADER_LINKS: ILink[] = [
   //   href: "https://demic-portfolio.netlify.app/",
   // },
   {
-    value: "resume",
+    value: "_app.header.resume",
     href: "/static/resume.pdf",
   },
   {
-    value: "blog",
+    value: "_app.header.blog",
     href: "/blog/",
   },
   {
-    value: "projects",
+    value: "_app.header.projects",
     href: "/projects/",
   },
   {
-    value: "about me",
+    value: "_app.header.about-me",
     href: "/about-me",
   },
 ];
@@ -32,17 +32,17 @@ export const HEADER_LINKS: ILink[] = [
 export const FOOTER_LINKS: ILink[] = [
   {
     newWindow: true,
-    value: "linkedin",
+    value: "/.index.footer.linkedin",
     href: "https://www.linkedin.com/in/michele-de-cillis/",
   },
   {
     newWindow: true,
-    value: "github",
+    value: "/.index.footer.github",
     href: "https://github.com/demic-dev",
   },
   {
     newWindow: true,
-    value: "email me",
+    value: "/.index.footer.email-me",
     href: "mailto:decillismicheledeveloper@gmail.com",
   },
 ];

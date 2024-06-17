@@ -5,24 +5,32 @@ import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import { createBreakpoint } from "react-use";
 import { ThemeProvider } from "styled-components";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 // components
 import CustomLink from "../components/CustomLink";
 // styles
 import * as styled from "../styles/pages/_app.style";
 // utils
-import { HEADER_LINKS } from "../data/links";
-import { GlobalStyles, themes } from "../utils/ThemeConfig";
 import InvertedCursor from "../components/InvertedCursor";
-import { Languages } from "../types";
+import {
+  AVAILABLE_LANGUAGES,
+  getSelectedLanguage,
+  getTranslation,
+} from "../utils/translations";
+import { GlobalStyles, themes } from "../utils/ThemeConfig";
+// data
+import { HEADER_LINKS } from "../data/links";
+// types
+import { Language } from "../types";
 // #endregion ::: IMPORTS
 
 const useBreakpoint = createBreakpoint({ L: 640, S: 350 });
 
 function MyApp({ Component }: AppProps) {
-  // const [] = useState<Languages>(
-  //   localStorage.getItem("lang") || navigator?.language
-  // );
+  const [currentLanguage, setCurrentLanguage] = useState<Language>(
+    getSelectedLanguage()
+  );
+
   const [themeIndex, setThemeIndex] = useState<number>(0);
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
@@ -37,7 +45,14 @@ function MyApp({ Component }: AppProps) {
   const handleThemeIndex = () =>
     setThemeIndex((idx) => (idx + 1) % themes.length);
 
-  const handleLanguage = () => {};
+  const handleLanguage = (code: Language) => () => {
+    localStorage.setItem("lang", code);
+    setCurrentLanguage(code);
+  };
+
+  useLayoutEffect(() => {
+    localStorage.setItem("lang", navigator?.language.split("-")[0] || "en");
+  }, []);
 
   useEffect(() => {
     if (breakpoint !== "S") {
@@ -59,7 +74,13 @@ function MyApp({ Component }: AppProps) {
             }}
           >
             <styled.ModalLinksContainer>
-              {HEADER_LINKS.map(CustomLink)}
+              {HEADER_LINKS.map((props) => (
+                <CustomLink
+                  {...props}
+                  value={getTranslation(props.value)}
+                  key={props.value}
+                />
+              ))}
             </styled.ModalLinksContainer>
           </styled.ModalContainer>
         ) : null}
@@ -70,13 +91,25 @@ function MyApp({ Component }: AppProps) {
               <styled.ThemeSwitcherButton onClick={handleThemeIndex}>
                 ⥃
               </styled.ThemeSwitcherButton>
-              <styled.ThemeSwitcherButton onClick={handleLanguage}>
-                🌐
-              </styled.ThemeSwitcherButton>
+              {AVAILABLE_LANGUAGES.map((lang) =>
+                currentLanguage !== lang.code ? (
+                  <styled.ThemeSwitcherButton
+                    onClick={handleLanguage(lang.code)}
+                  >
+                    {lang.flag}
+                  </styled.ThemeSwitcherButton>
+                ) : null
+              )}
             </styled.HeaderButtonContainer>
 
             <styled.HeaderLinksContainer>
-              {HEADER_LINKS.map(CustomLink)}
+              {HEADER_LINKS.map((props) => (
+                <CustomLink
+                  {...props}
+                  value={getTranslation(props.value)}
+                  key={props.value}
+                />
+              ))}
             </styled.HeaderLinksContainer>
 
             <styled.HeaderMenuButton onClick={handleMenu}>
