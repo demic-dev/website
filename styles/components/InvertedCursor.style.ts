@@ -20,5 +20,11 @@ export const Container = styled.div`
     scale: 0.45;
 
     pointer-events: none;
+
+    * {
+      cursor: none;
+      /* margin: 0;
+    padding: 0; */
+    }
   }
 `;

@@ -2,13 +2,16 @@
 // libs
 import React from "react";
 import { NextPage } from "next";
+import Head from "next/head";
+// components
+import PostCard from "../../components/PostCard";
 // styles
 import * as styled from "../../styles/pages/posts/index.style";
 // utils
 import { getTranslation } from "../../utils/translations";
 import { getSortedPostsData } from "../../utils/getPosts";
+// types
 import { MetadataPost } from "../../types/post";
-import PostCard from "../../components/PostCard";
 // #endregion ::: IMPORTS
 
 export async function getStaticProps() {
@@ -24,6 +27,12 @@ export async function getStaticProps() {
 const Blog: NextPage<{ postsMeta: MetadataPost[] }> = ({ postsMeta }) => {
   return (
     <>
+      <Head>
+        <title>{getTranslation("blog.index.title")}</title>
+        <meta name="description" content="Michele De Cillis's website" />
+        <meta name="author" content="Michele De Cillis" />
+      </Head>
+
       <styled.BodyContainer>
         <h1
           dangerouslySetInnerHTML={{
