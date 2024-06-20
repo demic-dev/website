@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: 720px) {
     content: "";
     position: absolute;
     z-index: 999;

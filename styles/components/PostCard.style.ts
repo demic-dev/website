@@ -1,6 +1,5 @@
 // #region ::: IMPORTS
 // libs
-import Link from "next/link";
 import styled from "styled-components";
 // #endregion ::: IMPORTS
 

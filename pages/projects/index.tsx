@@ -6,7 +6,47 @@ import { NextPage } from "next";
 import * as styled from "../../styles/pages/projects/index.style";
 // utils
 import { getTranslation } from "../../utils/translations";
+import ProjectCard from "../../components/ProjectCard";
+import { MetadataProject } from "../../types/project";
 // #endregion ::: IMPORTS
+
+const projects: MetadataProject[] = [
+  {
+    id: "uno",
+    title: "lorem ipsum",
+    description:
+      "Lorem ipsum dolor sit amet consectetur. Amet convallis dui quis porttitor lacus. Mi gravida dui fermentum ut.",
+    tags: ["react", "typescript"],
+  },
+  {
+    id: "due",
+    title: "lorem ipsum",
+    description:
+      "Lorem ipsum dolor sit amet consectetur. Amet convallis dui quis porttitor lacus. Mi gravida dui fermentum ut.",
+    tags: ["react", "typescript"],
+  },
+  {
+    id: "due",
+    title: "lorem ipsum",
+    description:
+      "Lorem ipsum dolor sit amet consectetur. Amet convallis dui quis porttitor lacus. Mi gravida dui fermentum ut.",
+    tags: ["react", "typescript"],
+  },
+  {
+    id: "due",
+    title: "lorem ipsum",
+    description:
+      "Lorem ipsum dolor sit amet consectetur. Amet convallis dui quis porttitor lacus. Mi gravida dui fermentum ut.",
+    tags: ["react", "typescript"],
+  },
+  {
+    id: "due",
+    title: "lorem ipsum",
+    description:
+      "Lorem ipsum dolor sit amet consectetur. Amet convallis dui quis porttitor lacus. Mi gravida dui fermentum ut.",
+    tags: ["react", "typescript"],
+  },
+];
 
 const Blog: NextPage<{}> = () => {
   return (
@@ -17,6 +57,11 @@ const Blog: NextPage<{}> = () => {
             __html: getTranslation("projects.index.title"),
           }}
         />
+        <styled.ProjectsContainer>
+          {projects.map((p) => (
+            <ProjectCard {...p} key={p.id} />
+          ))}
+        </styled.ProjectsContainer>
       </styled.BodyContainer>
     </>
   );

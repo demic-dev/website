@@ -14,7 +14,7 @@ const HeaderWrapper = styled.div`
 
   padding: 1.5rem 2rem;
 
-  @media (min-width: 640px) {
+  @media (min-width: 720px) {
     padding: 2.5rem 4rem;
   }
 `;
@@ -22,7 +22,7 @@ const HeaderWrapper = styled.div`
 const HeaderMenuButton = styled.button`
   font-size: 2rem;
 
-  @media (min-width: 640px) {
+  @media (min-width: 720px) {
     display: none;
   }
 `;
@@ -30,7 +30,7 @@ const HeaderMenuButton = styled.button`
 const HeaderLinksContainer = styled.div`
   display: none;
 
-  @media (min-width: 640px) {
+  @media (min-width: 720px) {
     display: flex;
     align-items: center;
     justify-content: flex-end;

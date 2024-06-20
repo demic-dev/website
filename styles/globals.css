@@ -29,7 +29,7 @@ a[target="_blank"]::after {
   vertical-align: super;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 720px) {
   a[target="_blank"]::after {
     content: "↗";
     font-size: small;
@@ -38,7 +38,7 @@ a[target="_blank"]::after {
 }
 
 /* inverted custom cursor */
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 720px) {
   * {
     cursor: none;
     /* margin: 0;

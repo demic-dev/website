@@ -25,7 +25,7 @@ import { HEADER_LINKS } from "../data/links";
 import { Language } from "../types/language";
 // #endregion ::: IMPORTS
 
-const useBreakpoint = createBreakpoint({ L: 640, S: 350 });
+const useBreakpoint = createBreakpoint({ L: 720, S: 350 });
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [currentLanguage, setCurrentLanguage] = useState<Language>(
@@ -52,7 +52,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   };
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
+    if (typeof window !== "undefined" && !localStorage.getItem("lang")) {
       localStorage.setItem("lang", navigator?.language.split("-")[0] || "en");
     }
 
