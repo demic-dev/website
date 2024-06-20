@@ -30,6 +30,11 @@
                 "en": "",
                 "fr": ""
             },
+            "title": {
+                "it": "home",
+                "en": "home",
+                "fr": "home"
+            },
             "hero": {
                 "it": "ciao 👋 sono michele de cillis,<br /> uno sviluppatore con sede in 🇮🇹",
                 "en": "hello 👋 i'm michele de cillis,<br /> a developer based in 🇮🇹",
@@ -64,10 +69,15 @@
                 "en": "about me",
                 "fr": "sur moi"
             },
-            "heading": {
-                "it": "",
-                "en": "",
-                "fr": ""
+            "tl-dr": {
+                "it": "tl;dr",
+                "en": "tl;dr",
+                "fr": "tl;dr"
+            },
+            "in-detail": {
+                "it": "in dettaglio",
+                "en": "in detail",
+                "fr": "en détail"
             }
         }
     },

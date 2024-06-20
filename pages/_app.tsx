@@ -8,10 +8,11 @@ import { ThemeProvider } from "styled-components";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 // components
 import CustomLink from "../components/CustomLink";
+import InvertedCursor from "../components/InvertedCursor";
+import BackgroundTitle from "../components/BackgroundTitle";
 // styles
 import * as styled from "../styles/pages/_app.style";
 // utils
-import InvertedCursor from "../components/InvertedCursor";
 import {
   AVAILABLE_LANGUAGES,
   getSelectedLanguage,
@@ -50,11 +51,11 @@ function MyApp({ Component, pageProps }: AppProps) {
     setCurrentLanguage(code);
   };
 
-  useLayoutEffect(() => {
-    localStorage.setItem("lang", navigator?.language.split("-")[0] || "en");
-  }, []);
-
   useEffect(() => {
+    if (typeof window !== "undefined") {
+      localStorage.setItem("lang", navigator?.language.split("-")[0] || "en");
+    }
+
     if (breakpoint !== "S") {
       setIsMenuOpen(false);
     }
@@ -64,6 +65,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <ThemeProvider theme={themes[themeIndex]}>
       <GlobalStyles />
       <InvertedCursor />
+      {/* <BackgroundTitle /> */}
       <styled.Container>
         {/* menù open from mobile */}
         {isMenuOpen ? (
@@ -88,18 +90,17 @@ function MyApp({ Component, pageProps }: AppProps) {
         <header ref={headerRef}>
           <styled.HeaderWrapper>
             <styled.HeaderButtonContainer>
-              <styled.ThemeSwitcherButton onClick={handleThemeIndex}>
+              {/* <styled.ThemeSwitcherButton onClick={handleThemeIndex}>
                 ⥃
-              </styled.ThemeSwitcherButton>
-              {AVAILABLE_LANGUAGES.map((lang) =>
-                currentLanguage !== lang.code ? (
-                  <styled.ThemeSwitcherButton
-                    onClick={handleLanguage(lang.code)}
-                  >
-                    {lang.flag}
-                  </styled.ThemeSwitcherButton>
-                ) : null
-              )}
+              </styled.ThemeSwitcherButton> */}
+              {AVAILABLE_LANGUAGES.map((lang) => (
+                <styled.ThemeSwitcherButton
+                  key={lang.code}
+                  onClick={handleLanguage(lang.code)}
+                >
+                  {lang.flag}
+                </styled.ThemeSwitcherButton>
+              ))}
             </styled.HeaderButtonContainer>
 
             <styled.HeaderLinksContainer>

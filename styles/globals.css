@@ -25,11 +25,15 @@ a {
 
 a[target="_blank"]::after {
   content: " ↗";
+  font-size: small;
+  vertical-align: super;
 }
 
 @media (max-width: 992px) {
   a[target="_blank"]::after {
     content: "↗";
+    font-size: small;
+    vertical-align: super;
   }
 }
 
