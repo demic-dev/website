@@ -8,6 +8,7 @@ import { ThemeProvider } from "styled-components";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 // components
 import CustomLink from "../components/CustomLink";
+import InvertedCursor from "../components/InvertedCursor";
 import BackgroundTitle from "../components/BackgroundTitle";
 // styles
 import * as styled from "../styles/pages/_app.style";
@@ -63,8 +64,8 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider theme={themes[themeIndex]}>
       <GlobalStyles />
-      {/* <InvertedCursor /> */}
-      <BackgroundTitle />
+      <InvertedCursor />
+      {/* <BackgroundTitle /> */}
       <styled.Container>
         {/* menù open from mobile */}
         {isMenuOpen ? (

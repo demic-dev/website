@@ -36,3 +36,12 @@ a[target="_blank"]::after {
     vertical-align: super;
   }
 }
+
+/* inverted custom cursor */
+@media screen and (min-width: 992px) {
+  * {
+    cursor: none;
+    /* margin: 0;
+    padding: 0; */
+  }
+}
