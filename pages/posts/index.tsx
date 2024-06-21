@@ -5,6 +5,7 @@ import { NextPage } from "next";
 import Head from "next/head";
 // components
 import PostCard from "../../components/PostCard";
+import ContentWrapper from "../../components/ContentWrapper";
 // styles
 import * as styled from "../../styles/pages/posts/index.style";
 // utils
@@ -33,7 +34,7 @@ const Blog: NextPage<{ postsMeta: MetadataPost[] }> = ({ postsMeta }) => {
         <meta name="author" content="Michele De Cillis" />
       </Head>
 
-      <styled.BodyContainer>
+      <ContentWrapper>
         <h1
           dangerouslySetInnerHTML={{
             __html: getTranslation("blog.index.title"),
@@ -44,7 +45,7 @@ const Blog: NextPage<{ postsMeta: MetadataPost[] }> = ({ postsMeta }) => {
             <PostCard {...p} key={p.id} />
           ))}
         </styled.PostsContainer>
-      </styled.BodyContainer>
+      </ContentWrapper>
     </>
   );
 };

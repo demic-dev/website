@@ -2,8 +2,8 @@
 // libs
 import React from "react";
 import { NextPage } from "next";
-// styles
-import * as styled from "../../styles/pages/posts/[id].style";
+// components
+import ContentWrapper from "../../components/ContentWrapper";
 // utils
 import { getAllPostIds, getPostData } from "../../utils/getPosts";
 // types
@@ -31,11 +31,11 @@ export async function getStaticProps({ params }: Params) {
 
 const Post: NextPage<{ postData: ParsedPost }> = ({ postData }) => {
   return (
-    <styled.BodyContainer>
+    <ContentWrapper>
       <h1>{postData.title}</h1>
       <small>{postData.date}</small>
       <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
-    </styled.BodyContainer>
+    </ContentWrapper>
   );
 };
 

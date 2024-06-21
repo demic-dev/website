@@ -11,7 +11,7 @@ const FooterContainer = styled.div`
   scroll-snap-type: x mandatory;
   padding: 1.5rem 2rem;
 
-  @media (min-width: 640px) {
+  @media (min-width: 720px) {
     gap: 6rem;
     padding: 2.5rem 4rem;
   }
@@ -33,7 +33,7 @@ const BodyContainer = styled.div`
   font-weight: 600;
   text-align: center;
 
-  @media (min-width: 640px) {
+  @media (min-width: 720px) {
     font-size: 4rem;
   }
 `;

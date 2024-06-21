@@ -1,9 +1,19 @@
 import styled from "styled-components";
 
-const BodyContainer = styled.div`
-  padding: 1rem 2rem;
+const ProjectsContainer = styled.div`
+  margin-top: 4rem;
 
-  font-size: 1.5rem;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  gap: 1rem;
+
+  @media (min-width: 720px) {
+    max-width: 40rem;
+  }
 `;
 
-export { BodyContainer };
+export { ProjectsContainer };

@@ -1,15 +1,12 @@
 import styled from "styled-components";
 
-const BodyContainer = styled.div`
-  padding: 1rem 2rem;
-  font-size: 1.5rem;
-`;
-
 const PostsContainer = styled.main`
+  margin-top: 3rem;
+
   display: flex;
   flex-direction: column;
 
-  gap: 2rem;
+  gap: 1.5rem;
 `;
 
-export { BodyContainer, PostsContainer };
+export { PostsContainer };

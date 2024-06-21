@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Container } from "../styles/components/InvertedCursor.style";
+import * as styled from "./style";
 
 function handleMouseMove(this: Document, e: globalThis.MouseEvent) {
   const cursorElement = document?.getElementById("inverted-cursor");
@@ -41,7 +41,7 @@ const InvertedCursor = () => {
     };
   }, []);
 
-  return <Container id="inverted-cursor" />;
+  return <styled.Container id="inverted-cursor" />;
 };
 
 export default InvertedCursor;

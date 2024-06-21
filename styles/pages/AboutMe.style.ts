@@ -14,7 +14,7 @@ const SectionContainer = styled.div`
   align-items: center;
   gap: 4rem;
 
-  @media (min-width: 640px) {
+  @media (min-width: 720px) {
     flex-direction: row;
     align-items: stretch;
   }
