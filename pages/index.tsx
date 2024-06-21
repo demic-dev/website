@@ -1,8 +1,6 @@
 // #region ::: IMPORTS
 // libs
 import Head from "next/head";
-// components
-import CustomLink from "../components/CustomLink";
 // types
 import type { NextPage } from "next";
 // styles
@@ -11,6 +9,7 @@ import * as styled from "../styles/pages/index.style";
 import { getTranslation } from "../utils/translations";
 // data
 import { FOOTER_LINKS } from "../data/links";
+import Link from "next/link";
 // #endregion ::: IMPORTS
 
 const Home: NextPage<{}> = () => {
@@ -31,11 +30,11 @@ const Home: NextPage<{}> = () => {
       <footer>
         <styled.FooterContainer>
           {FOOTER_LINKS.map((props) => (
-            <CustomLink
-              {...props}
-              value={getTranslation(props.value)}
-              key={props.value}
-            />
+            <Link href={props.href} key={props.value} passHref>
+              <a target={"_blank"} rel={"noopener"}>
+                {getTranslation(props.value)}
+              </a>
+            </Link>
           ))}
         </styled.FooterContainer>
       </footer>

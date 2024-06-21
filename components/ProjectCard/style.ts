@@ -11,11 +11,11 @@ const Container = styled.div`
   gap: 2rem;
 `;
 
-const Image = styled.div`
+const ImageContainer = styled.div`
+  position: relative;
+
   width: 64px;
   height: 64px;
-
-  background-color: gray;
 
   flex: 0 0 auto;
 `;
@@ -36,21 +36,4 @@ const MetaDataContainer = styled.div`
   }
 `;
 
-const TagsContainer = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-
-  font-size: 1.125rem;
-  font-weight: 300;
-`;
-
-const TagContainer = styled.span`
-  padding: 0.25rem 0.5rem;
-  border-radius: 4px;
-  background-color: #4a4a4a;
-
-  color: white;
-`;
-
-export { Container, Image, MetaDataContainer, TagsContainer, TagContainer };
+export { Container, ImageContainer, MetaDataContainer };

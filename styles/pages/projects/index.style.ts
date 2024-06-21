@@ -1,16 +1,5 @@
 import styled from "styled-components";
 
-const BodyContainer = styled.div`
-  width: auto;
-
-  margin: 0 auto;
-  padding: 1rem 2rem;
-
-  @media (min-width: 720px) {
-    max-width: 40rem;
-  }
-`;
-
 const ProjectsContainer = styled.div`
   margin-top: 4rem;
 
@@ -27,4 +16,4 @@ const ProjectsContainer = styled.div`
   }
 `;
 
-export { BodyContainer, ProjectsContainer };
+export { ProjectsContainer };

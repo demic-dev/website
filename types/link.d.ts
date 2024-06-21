@@ -8,5 +8,4 @@ export type LinkProps = React.ForwardRefExoticComponent<
 export interface ILink {
   value: string;
   href: string;
-  newWindow?: boolean;
 }

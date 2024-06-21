@@ -37,6 +37,17 @@ a[target="_blank"]::after {
   }
 }
 
+h1 {
+  font-size: 3rem;
+
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.75rem;
+  margin: 0;
+}
+
 /* inverted custom cursor */
 @media screen and (min-width: 720px) {
   * {

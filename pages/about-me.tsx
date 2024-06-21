@@ -1,13 +1,12 @@
 // #region ::: IMPORTS
 // libs
 import Head from "next/head";
-// components
-import CustomLink from "../components/CustomLink";
-// types
-import type { NextPage } from "next";
 // styles
 import * as styled from "../styles/pages/AboutMe.style";
+// utils
 import { getTranslation } from "../utils/translations";
+// types
+import type { NextPage } from "next";
 // #endregion ::: IMPORTS
 
 const AboutMe: NextPage<{}> = () => {

@@ -20,6 +20,11 @@
                 "it": "su di me",
                 "en": "about me",
                 "fr": "sur moi"
+            },
+            "home": {
+                "it": "home",
+                "en": "home",
+                "fr": "home"
             }
         }
     },

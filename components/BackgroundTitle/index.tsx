@@ -4,7 +4,7 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 // styles
-import { Container } from "../styles/components/BackgroundTitle";
+import { Container } from "./style";
 // #endregion ::: IMPORTS
 
 const DISABLED_ROUTE = ["/"];

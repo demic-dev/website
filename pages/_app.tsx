@@ -2,12 +2,13 @@
 // general imports
 import "../styles/globals.css";
 // libs
+import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
+import { useRouter } from "next/router";
 import type { AppProps } from "next/app";
 import { createBreakpoint } from "react-use";
 import { ThemeProvider } from "styled-components";
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
 // components
-import CustomLink from "../components/CustomLink";
 import InvertedCursor from "../components/InvertedCursor";
 import BackgroundTitle from "../components/BackgroundTitle";
 // styles
@@ -28,12 +29,15 @@ import { Language } from "../types/language";
 const useBreakpoint = createBreakpoint({ L: 720, S: 350 });
 
 function MyApp({ Component, pageProps }: AppProps) {
+  // I still don't know why it works, even if the state is not used...
   const [currentLanguage, setCurrentLanguage] = useState<Language>(
     getSelectedLanguage()
   );
 
   const [themeIndex, setThemeIndex] = useState<number>(0);
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+
+  const { route: currentRoute } = useRouter();
 
   const headerRef = useRef<HTMLElement>(null);
 
@@ -76,16 +80,17 @@ function MyApp({ Component, pageProps }: AppProps) {
             }}
           >
             <styled.ModalLinksContainer>
-              {HEADER_LINKS.map((props) => (
-                <CustomLink
-                  {...props}
-                  value={getTranslation(props.value)}
-                  key={props.value}
-                />
-              ))}
+              {HEADER_LINKS.map((props) =>
+                props.href !== currentRoute ? (
+                  <Link key={props.value} href={props.href} passHref>
+                    <a>{getTranslation(props.value)}</a>
+                  </Link>
+                ) : null
+              )}
             </styled.ModalLinksContainer>
           </styled.ModalContainer>
         ) : null}
+
         {/* default header on pc and mobile */}
         <header ref={headerRef}>
           <styled.HeaderWrapper>
@@ -104,13 +109,13 @@ function MyApp({ Component, pageProps }: AppProps) {
             </styled.HeaderButtonContainer>
 
             <styled.HeaderLinksContainer>
-              {HEADER_LINKS.map((props) => (
-                <CustomLink
-                  {...props}
-                  value={getTranslation(props.value)}
-                  key={props.value}
-                />
-              ))}
+              {HEADER_LINKS.map((props) =>
+                props.href !== currentRoute ? (
+                  <Link key={props.value} href={props.href} passHref>
+                    <a>{getTranslation(props.value)}</a>
+                  </Link>
+                ) : null
+              )}
             </styled.HeaderLinksContainer>
 
             <styled.HeaderMenuButton onClick={handleMenu}>
