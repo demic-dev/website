@@ -2,9 +2,12 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   position: absolute;
-  bottom: 0;
+  bottom: 1rem;
   left: 0;
   z-index: -1;
+
+  max-width: 100%;
+  overflow-x: hidden;
 
   margin-left: 1rem;
 
@@ -12,6 +15,6 @@ export const Container = styled.div`
   font-weight: bold;
   color: lightgray;
 
-  opacity: 0.35;
+  opacity: 0.25;
   user-select: none;
 `;

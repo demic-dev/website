@@ -1,25 +1,21 @@
 "use client";
 // #region ::: IMPORTS
 // libs
-import React, { useEffect, useState } from "react";
-import { useRouter } from "next/router";
+import React from "react";
 // styles
 import { Container } from "./style";
 // #endregion ::: IMPORTS
 
-const DISABLED_ROUTE = ["/"];
+const DISABLED_ROUTES =
+  /^(?!\/$)(?!\/posts\/[^\/]+$)(?!\/projects\/[^\/]+$).*/gm;
 
-const BackgroundTitle = () => {
-  const [title, setTitle] = useState<string>("");
-  const { route } = useRouter();
-  
-  console.log("ciao!!");
-  useEffect(() => {
-    console.log("ciao");
-    setTitle(document.title.toLowerCase());
-  }, [route]);
-  
-  if (typeof window === "undefined" || DISABLED_ROUTE.includes(route)) {
+type Props = {
+  title: string;
+  route: string;
+};
+
+const BackgroundTitle: React.FC<Props> = ({ title, route }) => {
+  if (typeof window === "undefined" || !route.match(DISABLED_ROUTES)) {
     return null;
   }
 

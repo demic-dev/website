@@ -1,6 +1,10 @@
 import { useEffect } from "react";
 import * as styled from "./style";
 
+type Props = {
+  route: string;
+};
+
 function handleMouseMove(this: Document, e: globalThis.MouseEvent) {
   const cursorElement = document?.getElementById("inverted-cursor");
 
@@ -11,16 +15,22 @@ function handleMouseMove(this: Document, e: globalThis.MouseEvent) {
 function handleMouseEnter() {
   const cursorElement = document?.getElementById("inverted-cursor");
 
-  cursorElement?.style.setProperty("scale", "1");
+  cursorElement?.style.setProperty("padding", "0.15rem");
+
+  cursorElement?.style.setProperty("width", "1.5rem");
+  cursorElement?.style.setProperty("height", "1.5rem");
 }
 
 function handleMouseLeave() {
   const cursorElement = document?.getElementById("inverted-cursor");
 
-  cursorElement?.style.setProperty("scale", "0.45");
+  cursorElement?.style.setProperty("padding", "1rem");
+
+  cursorElement?.style.setProperty("width", "0.5rem");
+  cursorElement?.style.setProperty("height", "0.5rem");
 }
 
-const InvertedCursor = () => {
+const InvertedCursor: React.FC<Props> = ({ route }) => {
   useEffect(() => {
     const clickableItems = document?.querySelectorAll("a, button");
 
@@ -39,7 +49,7 @@ const InvertedCursor = () => {
         i.removeEventListener("mouseleave", handleMouseLeave);
       });
     };
-  }, []);
+  }, [route]);
 
   return <styled.Container id="inverted-cursor" />;
 };

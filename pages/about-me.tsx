@@ -13,7 +13,7 @@ const AboutMe: NextPage<{}> = () => {
   return (
     <>
       <Head>
-        <title>About Me</title>
+        <title>{getTranslation("/.about-me.title")}</title>
         <meta name="description" content="Michele De Cillis's website" />
         <meta name="author" content="Michele De Cillis" />
       </Head>

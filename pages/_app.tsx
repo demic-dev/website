@@ -36,11 +36,13 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   const [themeIndex, setThemeIndex] = useState<number>(0);
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+  const [currentPageTitle, setCurrentPageTitle] = useState<string>(
+    typeof window === "undefined" ? "" : document.title
+  );
 
-  const { route: currentRoute } = useRouter();
+  const { route: currentRoute, events } = useRouter();
 
   const headerRef = useRef<HTMLElement>(null);
-
   const breakpoint = useBreakpoint();
 
   const headerHeight = headerRef.current?.clientHeight;
@@ -56,6 +58,19 @@ function MyApp({ Component, pageProps }: AppProps) {
   };
 
   useEffect(() => {
+    const handleRouteChange = (url: string) => {
+      setIsMenuOpen(false);
+      setCurrentPageTitle(document.title);
+    };
+
+    events.on("routeChangeComplete", handleRouteChange);
+
+    return () => {
+      events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, [events]);
+
+  useEffect(() => {
     if (typeof window !== "undefined" && !localStorage.getItem("lang")) {
       localStorage.setItem("lang", navigator?.language.split("-")[0] || "en");
     }
@@ -68,8 +83,10 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider theme={themes[themeIndex]}>
       <GlobalStyles />
-      <InvertedCursor />
-      {/* <BackgroundTitle /> */}
+      <InvertedCursor route={currentRoute} />
+      {breakpoint === "L" ? (
+        <BackgroundTitle title={currentPageTitle} route={currentRoute} />
+      ) : null}
       <styled.Container>
         {/* menù open from mobile */}
         {isMenuOpen ? (
@@ -98,14 +115,16 @@ function MyApp({ Component, pageProps }: AppProps) {
               {/* <styled.ThemeSwitcherButton onClick={handleThemeIndex}>
                 ⥃
               </styled.ThemeSwitcherButton> */}
-              {AVAILABLE_LANGUAGES.map((lang) => (
-                <styled.ThemeSwitcherButton
-                  key={lang.code}
-                  onClick={handleLanguage(lang.code)}
-                >
-                  {lang.flag}
-                </styled.ThemeSwitcherButton>
-              ))}
+              {AVAILABLE_LANGUAGES.map((lang) =>
+                lang.code !== currentLanguage ? (
+                  <styled.ThemeSwitcherButton
+                    key={lang.code}
+                    onClick={handleLanguage(lang.code)}
+                  >
+                    {lang.flag}
+                  </styled.ThemeSwitcherButton>
+                ) : null
+              )}
             </styled.HeaderButtonContainer>
 
             <styled.HeaderLinksContainer>

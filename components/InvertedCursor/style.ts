@@ -8,16 +8,24 @@ export const Container = styled.div`
     top: var(--y, -100px);
     left: var(--x, -100px);
 
-    width: 2.5em;
-    height: 2.5em;
+    width: 0.5rem;
+    height: 0.5rem;
 
-    background: #fff;
+    padding: 1rem;
+
+    background-color: gray;
+    background-clip: content-box;
+    border: 1px solid gray;
     border-radius: 50%;
-    mix-blend-mode: difference;
 
-    transition: 0.3s ease-in scale;
     transform: translate(-50%, -50%);
-    scale: 0.45;
+
+    /* mix-blend-mode: difference; */
+
+    transition: padding 0.3s ease-in, width 0.3s, height 0.3s;
+
+    /* transform: translate(-50%, -50%); */
+    /* scale: 0.45; */
 
     pointer-events: none;
   }
