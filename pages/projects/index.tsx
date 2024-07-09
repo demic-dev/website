@@ -3,42 +3,47 @@
 import React from "react";
 import Head from "next/head";
 import { NextPage } from "next";
+import { useTranslation } from "next-i18next";
 // components
 import ProjectCard from "../../components/ProjectCard";
 import ContentWrapper from "../../components/ContentWrapper";
 // styles
 import * as styled from "../../styles/pages/projects/index.style";
 // utils
-import { getTranslation } from "../../utils/translations";
 import { getSortedProjectsData } from "../../utils/getProjects";
 // types
 import { MetadataProject } from "../../types/project";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { LanguageProp } from "../../types/language";
 // #endregion ::: IMPORTS
 
-export async function getStaticProps() {
+export async function getStaticProps({ locale }: LanguageProp) {
   const projectsMeta = getSortedProjectsData();
 
   return {
     props: {
       projectsMeta,
+      ...(await serverSideTranslations(locale, ["common"])),
     },
   };
 }
 
-const Blog: NextPage<{ projectsMeta: MetadataProject[] }> = ({
+const Blog: NextPage<{ projectsMeta: MetadataProject[] } & LanguageProp> = ({
   projectsMeta,
 }) => {
+  const { t } = useTranslation();
+
   return (
     <>
       <Head>
-        <title>{getTranslation("projects.index.title")}</title>
+        <title>{t("projects.index.title")}</title>
         <meta name="description" content="Michele De Cillis's website" />
         <meta name="author" content="Michele De Cillis" />
       </Head>
       <ContentWrapper>
         <h1
           dangerouslySetInnerHTML={{
-            __html: getTranslation("projects.index.title"),
+            __html: t("projects.index.title"),
           }}
         />
         <styled.ProjectsContainer>

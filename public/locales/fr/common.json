@@ -1,0 +1,49 @@
+{
+    "_app": {
+        "header": {
+            "resume": "cv",
+            "blog": "blog",
+            "projects": "projets",
+            "about-me": "sur moi",
+            "home": "home"
+        }
+    },
+    "/": {
+        "index": {
+            "meta-description": "",
+            "title": "home",
+            "hero": "bonjour 👋 je suis michele de cillis,<br /> un développeur basé en 🇮🇹",
+            "footer": {
+                "linkedin": "linkedin",
+                "github": "github",
+                "email-me": "envoyez moi un email"
+            }
+        },
+        "about-me": {
+            "meta-description": "",
+            "title": "sur moi",
+            "tl-dr": {
+                "title": "tl;dr",
+                "content": "<b>Bonjour !</b> Je suis Michele De Cillis, et bienvenue dans mon portfolio. Je suis ingénieur logiciel et passionné de technologie. Je suis en dernière année de <i>Licence en Informatique</i>, où je m'immerge dans la théorie avancée et les meilleures pratiques en informatique. J'ai également travaillé pendant presque trois ans en tant que développeur <b>frontend</b> et <b>mobile</b>, apprenant à écrire du <i>code de qualité</i> qui soit à la fois <b>efficace</b> et <b>scalable</b>. Ma philosophie est que la technologie devrait <i>aider</i> les gens à <i>grandir</i> et à exprimer leur meilleur. Quand je n'apprends pas ou que je ne fais pas de projets, j'adore faire du vélo et de la randonnée."
+            },
+            "in-detail": {
+                "title": "en détail",
+                "content": "J'ai fait mes premiers pas dans le monde du <i>développement logiciel</i> au lycée, où j'ai appris les bases de l'informatique et participé à plusieurs compétitions d'<i>Arduino</i>. J'ai également participé au développement d'un bingo scolaire, où nous avons réussi à gérer avec succès plus de <i><b>1000</b></i> utilisateurs en ligne en même temps. Notre application a été reconnue par le <1>journal national</1>.<br/><br/>Par la suite, j'ai travaillé comme ingénieur logiciel <2>mobile</2> et <3>frontend</3> pendant presque trois ans. J'ai travaillé sur des sites de commerce électronique et des sites hautement dynamiques avec une communication client-serveur en temps réel et un total d'environ <i><b>200k</b></i> visites mensuelles. Avec cette expérience, j'ai développé de solides compétences techniques et une grande capacité à travailler en équipe, à la fois en personne et à distance.<br/>L'un des <i>défis</i> auxquels j'ai été confronté était la mise en œuvre d'un <b>microservice</b> dans le client web qui permettait à l'utilisateur d'essayer le produit en AR avant de l'acheter. J'ai chargé le microservice uniquement lorsque cela était nécessaire, sans alourdir excessivement le site web. De plus, en le gérant indépendamment, j'ai évité le <i>rerendering</i> inutile de l'ensemble du site web.<br /><br />Il y a deux ans, j'ai décidé d'élargir mes connaissances en m'inscrivant à une <4>licence en informatique</4>, motivé par ma curiosité pour le monde académique. J'ai également continué à travailler en freelance sur divers projets mineurs pour maintenir affûtées mes compétences en développement logiciel.<br /><br />Durant l'année 2023/24, pour satisfaire mes besoins en connaissances et en réseautage international, j'ai décidé de participer à un programme d'échange (<i>Erasmus+</i>) à l'<5>Université Paris-Saclay</5> en France, qui m'a offert l'opportunité d'approfondir mes connaissances en <i><6>machine learning</6></i> et de collaborer avec des équipes hautement internationales. Cette expérience m'a appris l'importance du travail d'équipe et m'a enrichi tant sur le plan personnel que professionnel.<br /><br />Passionné de <b><i>minimalisme numérique</i></b>, je crois fermement que la technologie doit servir les gens. Mon objectif est de créer des logiciels <b>fonctionnels</b>, <b>intuitifs</b> et <b>agréables</b> à utiliser, contribuant ainsi à améliorer la vie quotidienne des utilisateurs."
+            }
+        }
+    },
+    "blog": {
+        "index": {
+            "meta-description": "",
+            "title": "articles",
+            "heading": "articles"
+        }
+    },
+    "projects": {
+        "index": {
+            "meta-description": "",
+            "title": "projets",
+            "heading": "projets"
+        }
+    }
+}

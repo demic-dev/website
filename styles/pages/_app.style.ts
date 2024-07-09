@@ -7,7 +7,7 @@ const Container = styled.div`
   flex-direction: column;
 `;
 
-const HeaderWrapper = styled.div`
+const HeaderWrapper = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -50,8 +50,11 @@ const HeaderButtonContainer = styled.div`
   gap: 1rem;
 `;
 
-const ThemeSwitcherButton = styled.button`
+const ThemeSwitcherButton = styled.button<{ selected?: boolean }>`
   font-size: 2rem;
+
+  text-decoration: ${({ selected }) => (selected ? "underline" : "none")};
+  text-decoration-style: wavy;
 `;
 
 const slideFromBottom = keyframes`
@@ -67,6 +70,8 @@ const ModalContainer = styled.div`
   position: absolute;
   top: 0;
   left: 0;
+
+  z-index: 1;
 
   width: 100%;
   height: 100%;
@@ -87,7 +92,11 @@ const ModalLinksContainer = styled.div`
   align-items: flex-end;
   gap: 1.5rem;
 
-  font-size: 3rem;
+  font-size: 2.5rem;
+  
+  @media screen and (min-width: 720px) {
+    font-size: 3rem;
+  }
 `;
 
 export {

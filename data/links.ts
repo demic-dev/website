@@ -6,11 +6,6 @@ export const HOME_LINK: ILink = {
 };
 
 export const HEADER_LINKS: ILink[] = [
-  // {
-  //   newWindow: true,
-  //   value: "old site",
-  //   href: "https://demic-portfolio.netlify.app/",
-  // },
   {
     value: "_app.header.home",
     href: "/",
@@ -18,6 +13,7 @@ export const HEADER_LINKS: ILink[] = [
   {
     value: "_app.header.resume",
     href: "/static/resume.pdf",
+    locale: false
   },
   {
     value: "_app.header.blog",

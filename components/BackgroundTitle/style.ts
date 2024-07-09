@@ -1,20 +1,26 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  position: absolute;
-  bottom: 1rem;
-  left: 0;
-  z-index: -1;
+  display: none;
 
-  max-width: 100%;
-  overflow-x: hidden;
+  @media screen and (min-width: 720px) {
+    display: initial;
 
-  margin-left: 1rem;
+    position: absolute;
+    bottom: 1rem;
+    left: 0;
+    z-index: -1;
 
-  font-size: 12rem;
-  font-weight: bold;
-  color: lightgray;
+    max-width: 100%;
+    overflow-x: hidden;
 
-  opacity: 0.25;
-  user-select: none;
+    margin-left: 1rem;
+
+    font-size: 12rem;
+    font-weight: bold;
+    color: lightgray;
+
+    opacity: 0.25;
+    user-select: none;
+  }
 `;

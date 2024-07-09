@@ -1,7 +1,10 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  display: none;
   @media screen and (min-width: 720px) {
+    display: initial;
+
     content: "";
     position: absolute;
     z-index: 999;
@@ -20,12 +23,7 @@ export const Container = styled.div`
 
     transform: translate(-50%, -50%);
 
-    /* mix-blend-mode: difference; */
-
     transition: padding 0.3s ease-in, width 0.3s, height 0.3s;
-
-    /* transform: translate(-50%, -50%); */
-    /* scale: 0.45; */
 
     pointer-events: none;
   }

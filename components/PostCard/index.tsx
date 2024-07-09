@@ -13,11 +13,20 @@ import { getFormattedDate } from "../../utils/translations";
 const PostCard: React.FC<MetadataPost> = (post) => {
   return (
     <styled.Container>
-      <Link href={`/posts/${post.id}`} passHref>
-        {post.title}
-      </Link>
+      <h2>
+        <Link
+          href={{
+            pathname: `/posts/[id]`,
+            query: { id: post.id },
+          }}
+          passHref
+        >
+          {post.title}
+        </Link>
+      </h2>
       <styled.MetaDataContainer>
-        <small>{getFormattedDate(post.date)}</small> &middot;{" "}
+        {/* ADD DYNAMIC LOCALE */}
+        <small>{getFormattedDate("en", post.date)}</small> &middot;{" "}
         <small>{post.readingTime} min</small>
       </styled.MetaDataContainer>
     </styled.Container>

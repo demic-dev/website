@@ -12,9 +12,12 @@ const SectionContainer = styled.div`
   flex-wrap: wrap;
 
   align-items: center;
-  gap: 4rem;
+  gap: 2rem;
+
+  margin-bottom: 2rem;
 
   @media (min-width: 720px) {
+    gap: 10rem;
     flex-direction: row;
     align-items: stretch;
   }
@@ -26,30 +29,46 @@ const SectionContent = styled.p`
 `;
 
 const TLDRImageContainer = styled.div`
-  flex: 1 0 auto;
+  flex: 0 0 auto;
 
-  width: 148px;
-  height: 148px;
+  width: 224px;
+  height: 224px;
 
-  background-color: lightgray;
-  border-radius: 4px;
+  padding: 0.5rem;
 
-  rotate: 0.45rad;
+  background-color: #ece8be;
+  border-radius: 100%;
 
-  /* TO DELETE */
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media screen and (min-width: 720px) {
+    margin-right: 5rem;
+  }
+
+  img {
+    /* z-index: -1; */
+
+    /* filter: grayscale(100%); */
+    border-radius: 100%;
+
+    user-select: none;
+  }
 `;
 
 const InDetailLineContainer = styled.div`
-  flex: 1 0 auto;
+  display: none;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @media screen and (min-width: 720px) {
+    flex: 1 0 auto;
 
-  margin: 1em 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 1em 0 0 0;
+  }
 `;
 
 export {

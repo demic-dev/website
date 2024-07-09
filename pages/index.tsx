@@ -1,18 +1,30 @@
 // #region ::: IMPORTS
 // libs
 import Head from "next/head";
+import Link from "next/link";
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 // types
 import type { NextPage } from "next";
 // styles
 import * as styled from "../styles/pages/index.style";
-// utils
-import { getTranslation } from "../utils/translations";
 // data
 import { FOOTER_LINKS } from "../data/links";
-import Link from "next/link";
+// types
+import { LanguageProp } from "../types/language";
 // #endregion ::: IMPORTS
 
-const Home: NextPage<{}> = () => {
+export async function getStaticProps({ locale }: LanguageProp) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["common"])),
+    },
+  };
+}
+
+const Home: NextPage<LanguageProp> = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <Head>
@@ -22,9 +34,7 @@ const Home: NextPage<{}> = () => {
       </Head>
 
       <styled.BodyContainer>
-        <div
-          dangerouslySetInnerHTML={{ __html: getTranslation("/.index.hero") }}
-        />
+        <div dangerouslySetInnerHTML={{ __html: t("/.index.hero") }} />
       </styled.BodyContainer>
 
       <footer>
@@ -32,7 +42,7 @@ const Home: NextPage<{}> = () => {
           {FOOTER_LINKS.map((props) => (
             <Link href={props.href} key={props.value} passHref>
               <a target={"_blank"} rel={"noopener"}>
-                {getTranslation(props.value)}
+                {t(props.value)}
               </a>
             </Link>
           ))}

@@ -8,9 +8,6 @@ const Container = styled.div`
   flex-direction: column;
 
   a {
-    font-size: 1.75rem;
-    font-weight: 700;
-
     text-decoration: none;
   }
 `;
