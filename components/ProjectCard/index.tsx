@@ -2,13 +2,13 @@
 // libs
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 // components
 import TagsBadges from "../TagsBadges";
 // styles
 import * as styled from "./style";
 // types
 import { MetadataProject } from "../../types/project";
-import Image from "next/image";
 // #endregion ::: IMPORTS
 
 const ProjectCard: React.FC<MetadataProject> = (project) => {
@@ -23,7 +23,17 @@ const ProjectCard: React.FC<MetadataProject> = (project) => {
         />
       </styled.ImageContainer>
       <styled.MetaDataContainer>
-        <Link href={`/projects/${project.id}`}>{project.title}</Link>
+        <h2>
+          <Link
+            href={{
+              pathname: `projects/[id]`,
+              query: { id: project.id },
+            }}
+            passHref
+          >
+            {project.title}
+          </Link>
+        </h2>
         <p>{project.description}</p>
         <TagsBadges tags={project.tags} />
       </styled.MetaDataContainer>

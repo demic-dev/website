@@ -7,23 +7,34 @@ const Container = styled.div`
   padding: 2rem 1rem;
 
   display: flex;
+  flex-direction: column;
   align-items: flex-start;
-  gap: 2rem;
+
+  gap: 0.5rem;
+  
+  @media screen and (min-width: 720px) {
+    flex-direction: row;
+    gap: 2rem;
+  }
 `;
 
 const ImageContainer = styled.div`
   position: relative;
 
-  width: 64px;
-  height: 64px;
+  width: 100%;
+  height: 256px;
 
   flex: 0 0 auto;
+
+  @media screen and (min-width: 720px) {
+    width: 64px;
+    height: 64px;
+  }
 `;
 
 const MetaDataContainer = styled.div`
   a {
-    font-size: 1.5rem;
-    font-weight: 700;
+   text-decoration: none;
   }
 
   p {

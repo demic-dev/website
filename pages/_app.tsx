@@ -8,39 +8,38 @@ import { useRouter } from "next/router";
 import type { AppProps } from "next/app";
 import { createBreakpoint } from "react-use";
 import { ThemeProvider } from "styled-components";
+import { appWithTranslation, useTranslation } from "next-i18next";
 // components
 import InvertedCursor from "../components/InvertedCursor";
-import BackgroundTitle from "../components/BackgroundTitle";
 // styles
 import * as styled from "../styles/pages/_app.style";
 // utils
-import {
-  AVAILABLE_LANGUAGES,
-  getSelectedLanguage,
-  getTranslation,
-} from "../utils/translations";
+import { AVAILABLE_LANGUAGES } from "../utils/translations";
 import { GlobalStyles, themes } from "../utils/ThemeConfig";
 // data
 import { HEADER_LINKS } from "../data/links";
 // types
 import { Language } from "../types/language";
+import dynamic from "next/dynamic";
 // #endregion ::: IMPORTS
+
+const NoSSRBackgroundTitle = dynamic(
+  () => import("../components/BackgroundTitle"),
+  { ssr: false }
+);
 
 const useBreakpoint = createBreakpoint({ L: 720, S: 350 });
 
 function MyApp({ Component, pageProps }: AppProps) {
-  // I still don't know why it works, even if the state is not used...
-  const [currentLanguage, setCurrentLanguage] = useState<Language>(
-    getSelectedLanguage()
-  );
-
   const [themeIndex, setThemeIndex] = useState<number>(0);
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const [currentPageTitle, setCurrentPageTitle] = useState<string>(
     typeof window === "undefined" ? "" : document.title
   );
 
-  const { route: currentRoute, events } = useRouter();
+  const { t } = useTranslation();
+
+  const { route: currentRoute, events, ...router } = useRouter();
 
   const headerRef = useRef<HTMLElement>(null);
   const breakpoint = useBreakpoint();
@@ -53,8 +52,14 @@ function MyApp({ Component, pageProps }: AppProps) {
     setThemeIndex((idx) => (idx + 1) % themes.length);
 
   const handleLanguage = (code: Language) => () => {
-    localStorage.setItem("lang", code);
-    setCurrentLanguage(code);
+    router.push(
+      {
+        pathname: router.pathname,
+        query: router.query,
+      },
+      undefined,
+      { locale: code }
+    );
   };
 
   useEffect(() => {
@@ -83,9 +88,9 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider theme={themes[themeIndex]}>
       <GlobalStyles />
-      <InvertedCursor route={currentRoute} />
-      {breakpoint === "L" ? (
-        <BackgroundTitle title={currentPageTitle} route={currentRoute} />
+      {breakpoint !== "S" ? <InvertedCursor route={currentRoute} /> : null}
+      {breakpoint !== "S" ? (
+        <NoSSRBackgroundTitle title={currentPageTitle} route={currentRoute} />
       ) : null}
       <styled.Container>
         {/* menù open from mobile */}
@@ -97,51 +102,54 @@ function MyApp({ Component, pageProps }: AppProps) {
             }}
           >
             <styled.ModalLinksContainer>
-              {HEADER_LINKS.map((props) =>
-                props.href !== currentRoute ? (
-                  <Link key={props.value} href={props.href} passHref>
-                    <a>{getTranslation(props.value)}</a>
-                  </Link>
-                ) : null
-              )}
+              {HEADER_LINKS.map((props) => (
+                <Link
+                  passHref
+                  key={props.value}
+                  href={props.href}
+                  locale={props.locale}
+                >
+                  <a>{t(props.value)}</a>
+                </Link>
+              ))}
             </styled.ModalLinksContainer>
           </styled.ModalContainer>
         ) : null}
-
         {/* default header on pc and mobile */}
-        <header ref={headerRef}>
-          <styled.HeaderWrapper>
-            <styled.HeaderButtonContainer>
-              {/* <styled.ThemeSwitcherButton onClick={handleThemeIndex}>
+
+        <styled.HeaderWrapper ref={headerRef}>
+          <styled.HeaderButtonContainer>
+            {/* <styled.ThemeSwitcherButton onClick={handleThemeIndex}>
                 ⥃
               </styled.ThemeSwitcherButton> */}
-              {AVAILABLE_LANGUAGES.map((lang) =>
-                lang.code !== currentLanguage ? (
-                  <styled.ThemeSwitcherButton
-                    key={lang.code}
-                    onClick={handleLanguage(lang.code)}
-                  >
-                    {lang.flag}
-                  </styled.ThemeSwitcherButton>
-                ) : null
-              )}
-            </styled.HeaderButtonContainer>
+            {AVAILABLE_LANGUAGES.map((lang) => (
+              <styled.ThemeSwitcherButton
+                key={lang.code}
+                onClick={handleLanguage(lang.code)}
+                selected={lang.code === router.locale}
+              >
+                {lang.flag}
+              </styled.ThemeSwitcherButton>
+            ))}
+          </styled.HeaderButtonContainer>
 
-            <styled.HeaderLinksContainer>
-              {HEADER_LINKS.map((props) =>
-                props.href !== currentRoute ? (
-                  <Link key={props.value} href={props.href} passHref>
-                    <a>{getTranslation(props.value)}</a>
-                  </Link>
-                ) : null
-              )}
-            </styled.HeaderLinksContainer>
+          <styled.HeaderLinksContainer>
+            {HEADER_LINKS.map((props) => (
+              <Link
+                passHref
+                key={props.value}
+                href={props.href}
+                locale={props.locale}
+              >
+                <a>{t(props.value)}</a>
+              </Link>
+            ))}
+          </styled.HeaderLinksContainer>
 
-            <styled.HeaderMenuButton onClick={handleMenu}>
-              {isMenuOpen ? "✕" : "☰"}
-            </styled.HeaderMenuButton>
-          </styled.HeaderWrapper>
-        </header>
+          <styled.HeaderMenuButton onClick={handleMenu}>
+            {isMenuOpen ? "✕" : "☰"}
+          </styled.HeaderMenuButton>
+        </styled.HeaderWrapper>
 
         <Component {...pageProps} />
       </styled.Container>
@@ -149,4 +157,4 @@ function MyApp({ Component, pageProps }: AppProps) {
   );
 }
 
-export default MyApp;
+export default appWithTranslation(MyApp);

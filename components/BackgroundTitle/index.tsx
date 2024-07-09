@@ -15,11 +15,11 @@ type Props = {
 };
 
 const BackgroundTitle: React.FC<Props> = ({ title, route }) => {
-  if (typeof window === "undefined" || !route.match(DISABLED_ROUTES)) {
+  if (!route.match(DISABLED_ROUTES)) {
     return null;
   }
 
-  return <Container>{title}</Container>;
+  return <Container suppressHydrationWarning>{title}</Container>;
 };
 
 export default BackgroundTitle;

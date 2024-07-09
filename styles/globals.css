@@ -38,15 +38,26 @@ a[target="_blank"]::after {
 }
 
 h1 {
-  font-size: 3rem;
-
+  font-size: 2rem;
+  
   margin: 0;
 }
 
 h2 {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   margin: 0;
 }
+
+@media screen and (min-width: 720px) {
+  h1 {
+    font-size: 3rem;
+  }
+  
+  h2 {
+    font-size: 1.75rem;
+  }
+}
+
 
 /* inverted custom cursor */
 @media screen and (min-width: 720px) {

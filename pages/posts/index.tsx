@@ -3,33 +3,38 @@
 import React from "react";
 import { NextPage } from "next";
 import Head from "next/head";
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 // components
 import PostCard from "../../components/PostCard";
 import ContentWrapper from "../../components/ContentWrapper";
 // styles
 import * as styled from "../../styles/pages/posts/index.style";
 // utils
-import { getTranslation } from "../../utils/translations";
 import { getSortedPostsData } from "../../utils/getPosts";
 // types
 import { MetadataPost } from "../../types/post";
+import { LanguageProp } from "../../types/language";
 // #endregion ::: IMPORTS
 
-export async function getStaticProps() {
+export async function getStaticProps({ locale }: LanguageProp) {
   const postsMeta = getSortedPostsData();
 
   return {
     props: {
       postsMeta,
+      ...(await serverSideTranslations(locale, ["common"])),
     },
   };
 }
 
 const Blog: NextPage<{ postsMeta: MetadataPost[] }> = ({ postsMeta }) => {
+  const { t } = useTranslation();
+
   return (
     <>
       <Head>
-        <title>{getTranslation("blog.index.title")}</title>
+        <title>{t("blog.index.title")}</title>
         <meta name="description" content="Michele De Cillis's website" />
         <meta name="author" content="Michele De Cillis" />
       </Head>
@@ -37,7 +42,7 @@ const Blog: NextPage<{ postsMeta: MetadataPost[] }> = ({ postsMeta }) => {
       <ContentWrapper>
         <h1
           dangerouslySetInnerHTML={{
-            __html: getTranslation("blog.index.title"),
+            __html: t("blog.index.title"),
           }}
         />
         <styled.PostsContainer>
