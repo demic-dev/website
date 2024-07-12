@@ -10,9 +10,9 @@
     },
     "/": {
         "index": {
-            "meta-description": "",
+            "meta-description": "Discover my work as a developer. Connect with me on social media and learn more about me.",
             "title": "home",
-            "hero": "hello 👋 i'm michele de cillis,<br /> a tech enthusiast based in italy",
+            "hero": "hello 👋 i'm michele de cillis,<br /> developer and tech enthusiast",
             "footer": {
                 "linkedin": "linkedin",
                 "github": "github",
@@ -20,11 +20,11 @@
             }
         },
         "about-me": {
-            "meta-description": "",
+            "meta-description": "Learn more about my journey and skills as a developer. Explore my experience, specializations, and completed projects.",
             "title": "about me",
             "tl-dr": {
                 "title": "tl;dr",
-                "content": "<b>Hello!</b> I'm Michele De Cillis, and welcome to my portfolio. I'm a software engineer and a tech enthusiast. I am in my final year of a <i>BSc in Computer Science</i>, where I am deep diving into advanced theory and best practices in CS. I also worked for almost three years as a <b>frontend</b> and <b>mobile</b> developer, learning to write <i>quality code</i> that is both <b>efficient</b> and <b>scalable</b>. My school of thought is that technology should <i>help</i> people to <i>grow</i> and express their best. When I'm not learning or making projects, I love cycling, hiking."
+                "content": "<b>Ciao!</b> I'm Michele De Cillis, and welcome to my portfolio. I'm a software engineer and a tech enthusiast. I am in my final year of a <i>BSc in Computer Science</i>, where I am deep diving into advanced theory and best practices in CS. I also worked for almost three years as a <b>frontend</b> and <b>mobile</b> developer, learning to write <i>quality code</i> that is both <b>efficient</b> and <b>scalable</b>. My school of thought is that technology should <i>help</i> people to <i>grow</i> and express their best. When I'm not learning or making projects, I love cycling, hiking."
             },
             "in-detail": {
                 "title": "in detail",

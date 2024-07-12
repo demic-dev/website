@@ -28,7 +28,7 @@ const AboutMe: NextPage<{}> = () => {
     <>
       <Head>
         <title>{t("/.about-me.title")}</title>
-        <meta name="description" content="Michele De Cillis's website" />
+        <meta name="description" content={t("/.about-me.meta-description")} />
         <meta name="author" content="Michele De Cillis" />
       </Head>
 
@@ -74,9 +74,7 @@ const AboutMe: NextPage<{}> = () => {
         />
         <styled.SectionContainer>
           <styled.InDetailLineContainer>
-            <div
-              style={{ width: 12, height: "100%", backgroundColor: "green" }}
-            />
+            <div />
           </styled.InDetailLineContainer>
           <styled.SectionContent>
             <Trans

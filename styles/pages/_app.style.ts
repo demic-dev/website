@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styled, { keyframes } from "styled-components";
 
 const Container = styled.div`
@@ -37,8 +38,6 @@ const HeaderLinksContainer = styled.div`
     gap: 3rem;
 
     font-size: 1.5rem;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
   }
 `;
 
@@ -48,6 +47,10 @@ const HeaderButtonContainer = styled.div`
   justify-content: center;
 
   gap: 1rem;
+
+  & > :first-child {
+    margin-right: 1rem;
+  }
 `;
 
 const ThemeSwitcherButton = styled.button<{ selected?: boolean }>`
@@ -93,10 +96,14 @@ const ModalLinksContainer = styled.div`
   gap: 1.5rem;
 
   font-size: 2.5rem;
-  
+
   @media screen and (min-width: 720px) {
     font-size: 3rem;
   }
+`;
+
+const HeaderLinks = styled.a<{ selected?: boolean }>`
+  text-decoration-style: ${({ selected }) => (selected ? "wavy" : "inherit")};
 `;
 
 export {
@@ -108,4 +115,5 @@ export {
   ThemeSwitcherButton,
   ModalContainer,
   ModalLinksContainer,
+  HeaderLinks,
 };

@@ -8,7 +8,8 @@ module.exports = {
     debug: process.env.NODE_ENV === 'development',
     i18n: {
         defaultLocale: 'default',
-        locales: ['default', 'en', 'fr', 'it'],
+        locales: ['default', 'en', 'it'],
+        // locales: ['default', 'en', 'fr', 'it'],
         localeDetection: false
     },
     localePath:

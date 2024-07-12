@@ -18,9 +18,9 @@ export const Container = styled.div`
 
     font-size: 12rem;
     font-weight: bold;
-    color: lightgray;
+    color: ${({theme}) => theme.text};
 
-    opacity: 0.25;
+    opacity: 0.1;
     user-select: none;
   }
 `;

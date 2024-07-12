@@ -13,16 +13,16 @@ export const HEADER_LINKS: ILink[] = [
   {
     value: "_app.header.resume",
     href: "/static/resume.pdf",
-    locale: false
+    locale: false,
   },
-  {
-    value: "_app.header.blog",
-    href: "/posts",
-  },
-  {
-    value: "_app.header.projects",
-    href: "/projects",
-  },
+  // {
+  //   value: "_app.header.blog",
+  //   href: "/posts",
+  // },
+  // {
+  //   value: "_app.header.projects",
+  //   href: "/projects",
+  // },
   {
     value: "_app.header.about-me",
     href: "/about-me",

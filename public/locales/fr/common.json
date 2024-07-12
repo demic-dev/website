@@ -12,7 +12,7 @@
         "index": {
             "meta-description": "",
             "title": "home",
-            "hero": "bonjour 👋 je suis michele de cillis,<br /> un développeur basé en 🇮🇹",
+            "hero": "bonjour 👋 je suis michele <br />de cillis, développeur et <br />passionné de technologie",
             "footer": {
                 "linkedin": "linkedin",
                 "github": "github",
@@ -24,7 +24,7 @@
             "title": "sur moi",
             "tl-dr": {
                 "title": "tl;dr",
-                "content": "<b>Bonjour !</b> Je suis Michele De Cillis, et bienvenue dans mon portfolio. Je suis ingénieur logiciel et passionné de technologie. Je suis en dernière année de <i>Licence en Informatique</i>, où je m'immerge dans la théorie avancée et les meilleures pratiques en informatique. J'ai également travaillé pendant presque trois ans en tant que développeur <b>frontend</b> et <b>mobile</b>, apprenant à écrire du <i>code de qualité</i> qui soit à la fois <b>efficace</b> et <b>scalable</b>. Ma philosophie est que la technologie devrait <i>aider</i> les gens à <i>grandir</i> et à exprimer leur meilleur. Quand je n'apprends pas ou que je ne fais pas de projets, j'adore faire du vélo et de la randonnée."
+                "content": "<b>Ciao !</b> Je suis Michele De Cillis, et bienvenue dans mon portfolio. Je suis ingénieur logiciel et passionné de technologie. Je suis en dernière année de <i>Licence en Informatique</i>, où je m'immerge dans la théorie avancée et les meilleures pratiques en informatique. J'ai également travaillé pendant presque trois ans en tant que développeur <b>frontend</b> et <b>mobile</b>, apprenant à écrire du <i>code de qualité</i> qui soit à la fois <b>efficace</b> et <b>scalable</b>. Ma philosophie est que la technologie devrait <i>aider</i> les gens à <i>grandir</i> et à exprimer leur meilleur. Quand je n'apprends pas ou que je ne fais pas de projets, j'adore faire du vélo et de la randonnée."
             },
             "in-detail": {
                 "title": "en détail",
