@@ -1,20 +1,50 @@
-# Getting Started
+# My Developer Portfolio
 
-First, run the development server:
+Welcome to my personal developer portfolio repository! This website is made with _NextJS_, _styled-components_ and _i18n_.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Table of Contents
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- [Introduction](#introduction)
+- [Setup and Installation](#setup-and-installation)
+- [Maintenance](#maintenance)
+- [Usage](#usage)
+- [License](#license)
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Introduction
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+I am Michele De Cillis, a developer and a tech enthusiast. This portfolio showcases my skills, projects, and professional journey. Feel free to explore and connect with me.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Setup and Installation
+
+To set up and run this project locally, follow these steps:
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/yourusername/portfolio.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd portfolio
+   ```
+
+3. Install dependancies:
+
+   ```bash
+       npm install # or yarn install
+   ```
+
+4. Start the development server:
+
+   ```bash
+       npm run dev
+   ```
+
+## Usage
+
+After starting the development server, you can view the website by navigating to `http://localhost:3000` in your web browser.
 
 ## Maintenance
 
@@ -27,18 +57,15 @@ When creating a new file, make sure to surround all the imports with this decora
 
 Also, all the imports are divided per kind of import, in order to maintain the imports easy to read. There are the following kinds:
 
-- libs - All the external libraries
-- components - All the custom components
-- styles - All the styles file (styled-components and so)
-- utils - All the miscellaneous, like generic functions, translations
-- data - All the data file, like translations or data structures
-- types - All the file imports
-
 ```typescript
-// libs
-// components
-// styles
-// utils
-// data
-// types
+// libs - All the external libraries
+// components - All the custom React components
+// styles - All the styles file (styled-components and so)
+// utils - All the miscellaneous, like generic functions, translations
+// data - All the data file, like translations or data structures
+// types - All the file imports
 ```
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for more details.
