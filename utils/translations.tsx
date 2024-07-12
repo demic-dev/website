@@ -9,7 +9,7 @@ import { LanguageObject, Language } from "../types/language";
 export const AVAILABLE_LANGUAGES: LanguageObject[] = [
   { flag: "🇮🇹", code: "it" },
   { flag: "🇺🇸", code: "en" },
-  { flag: "🇫🇷", code: "fr" },
+  // { flag: "🇫🇷", code: "fr" },
 ];
 
 function getDateLocale(locale: Language): Locale {

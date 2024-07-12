@@ -13,12 +13,20 @@ const FooterContainer = styled.div`
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
 
-  @media (min-width: 720px) {
-    padding: 2.5rem 4rem;
-  }
-
   a {
     flex: 1 0 auto;
+  }
+
+  @media (min-width: 720px) {
+    padding: 2.5rem 4rem;
+
+    a {
+      flex: 0 1 auto;
+    }
+  }
+
+  &::-webkit-scrollbar {
+    visibility: hidden;
   }
 `;
 

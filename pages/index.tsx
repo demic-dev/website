@@ -29,7 +29,7 @@ const Home: NextPage<LanguageProp> = () => {
     <>
       <Head>
         <title>home</title>
-        <meta name="description" content="Michele De Cillis's website" />
+        <meta name="description" content={t("/.index.meta-description")} />
         <meta name="author" content="Michele De Cillis" />
       </Head>
 

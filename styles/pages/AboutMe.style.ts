@@ -36,7 +36,8 @@ const TLDRImageContainer = styled.div`
 
   padding: 0.5rem;
 
-  background-color: #ece8be;
+  /* background-color: #fff1c1; */
+  background-color: ${({ theme }) => theme.secondary};
   border-radius: 100%;
 
   display: flex;
@@ -48,8 +49,6 @@ const TLDRImageContainer = styled.div`
   }
 
   img {
-    /* z-index: -1; */
-
     /* filter: grayscale(100%); */
     border-radius: 100%;
 
@@ -68,6 +67,18 @@ const InDetailLineContainer = styled.div`
     justify-content: center;
 
     margin: 1em 0 0 0;
+
+    & > :first-child {
+      width: 12px;
+      height: 100%;
+      background-image: linear-gradient(
+        ${({ theme }) => theme.text} 55%,
+        rgba(255, 255, 255, 0) 0%
+      );
+      background-position: right;
+      background-size: 12px 70px;
+      background-repeat: repeat-y;
+    }
   }
 `;
 

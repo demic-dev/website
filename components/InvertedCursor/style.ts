@@ -7,7 +7,7 @@ export const Container = styled.div`
 
     content: "";
     position: absolute;
-    z-index: 999;
+    z-index: CC9;
     top: var(--y, -100px);
     left: var(--x, -100px);
 
@@ -16,9 +16,10 @@ export const Container = styled.div`
 
     padding: 1rem;
 
-    background-color: gray;
+    background-color: ${({ theme }) => theme.text}CC;
+
     background-clip: content-box;
-    border: 1px solid gray;
+    border: 1px solid ${({ theme }) => theme.text}CC;
     border-radius: 50%;
 
     transform: translate(-50%, -50%);

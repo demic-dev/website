@@ -62,6 +62,9 @@ function MyApp({ Component, pageProps }: AppProps) {
     );
   };
 
+  const activeTheme = themes[themeIndex];
+  const nextTheme = themes[(themeIndex + 1) % themes.length];
+
   useEffect(() => {
     const handleRouteChange = (url: string) => {
       setIsMenuOpen(false);
@@ -76,22 +79,16 @@ function MyApp({ Component, pageProps }: AppProps) {
   }, [events]);
 
   useEffect(() => {
-    if (typeof window !== "undefined" && !localStorage.getItem("lang")) {
-      localStorage.setItem("lang", navigator?.language.split("-")[0] || "en");
-    }
-
     if (breakpoint !== "S") {
       setIsMenuOpen(false);
     }
   }, [breakpoint]);
 
   return (
-    <ThemeProvider theme={themes[themeIndex]}>
+    <ThemeProvider theme={activeTheme}>
       <GlobalStyles />
-      {breakpoint !== "S" ? <InvertedCursor route={currentRoute} /> : null}
-      {breakpoint !== "S" ? (
-        <NoSSRBackgroundTitle title={currentPageTitle} route={currentRoute} />
-      ) : null}
+      <InvertedCursor route={currentRoute} />
+      <NoSSRBackgroundTitle title={currentPageTitle} route={currentRoute} />
       <styled.Container>
         {/* menù open from mobile */}
         {isMenuOpen ? (
@@ -109,7 +106,9 @@ function MyApp({ Component, pageProps }: AppProps) {
                   href={props.href}
                   locale={props.locale}
                 >
-                  <a>{t(props.value)}</a>
+                  <styled.HeaderLinks selected={props.href === router.pathname}>
+                    {t(props.value)}
+                  </styled.HeaderLinks>
                 </Link>
               ))}
             </styled.ModalLinksContainer>
@@ -119,9 +118,10 @@ function MyApp({ Component, pageProps }: AppProps) {
 
         <styled.HeaderWrapper ref={headerRef}>
           <styled.HeaderButtonContainer>
-            {/* <styled.ThemeSwitcherButton onClick={handleThemeIndex}>
-                ⥃
-              </styled.ThemeSwitcherButton> */}
+            <styled.ThemeSwitcherButton onClick={handleThemeIndex}>
+              {nextTheme.emoji}
+            </styled.ThemeSwitcherButton>
+
             {AVAILABLE_LANGUAGES.map((lang) => (
               <styled.ThemeSwitcherButton
                 key={lang.code}
@@ -141,7 +141,9 @@ function MyApp({ Component, pageProps }: AppProps) {
                 href={props.href}
                 locale={props.locale}
               >
-                <a>{t(props.value)}</a>
+                <styled.HeaderLinks selected={props.href === router.pathname}>
+                  {t(props.value)}
+                </styled.HeaderLinks>
               </Link>
             ))}
           </styled.HeaderLinksContainer>
