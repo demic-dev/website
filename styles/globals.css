@@ -6,9 +6,8 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   box-sizing: border-box;
 
-  height: 100vh;
   width: 100vw;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 button {
@@ -26,21 +25,45 @@ a {
 
 a[target="_blank"]::after {
   content: " ↗";
+  font-size: small;
+  vertical-align: super;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 720px) {
   a[target="_blank"]::after {
     content: "↗";
+    font-size: small;
+    vertical-align: super;
   }
 }
 
-/*
- * inverted custom cursor
- */
-@media screen and (min-width: 992px) {
+h1 {
+  font-size: 2rem;
+  
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+@media screen and (min-width: 720px) {
+  h1 {
+    font-size: 3rem;
+  }
+  
+  h2 {
+    font-size: 1.75rem;
+  }
+}
+
+
+/* inverted custom cursor */
+@media screen and (min-width: 720px) {
   * {
     cursor: none;
-    margin: 0;
-    padding: 0;
+    /* margin: 0;
+    padding: 0; */
   }
 }

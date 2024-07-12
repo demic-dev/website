@@ -1,49 +1,45 @@
 import { ILink } from "../types/link";
 
+export const HOME_LINK: ILink = {
+  value: "home",
+  href: "/home/",
+};
+
 export const HEADER_LINKS: ILink[] = [
   {
-    newWindow: true,
-    value: "old site",
-    href: "https://demic-portfolio.netlify.app/",
+    value: "_app.header.home",
+    href: "/",
   },
   {
-    value: "resume",
+    value: "_app.header.resume",
     href: "/static/resume.pdf",
-  }
+    locale: false,
+  },
   // {
-  //   value: "experiences",
-  //   href: "/experiences",
+  //   value: "_app.header.blog",
+  //   href: "/posts",
   // },
   // {
-  //   value: "projects",
+  //   value: "_app.header.projects",
   //   href: "/projects",
   // },
+  {
+    value: "_app.header.about-me",
+    href: "/about-me",
+  },
 ];
 
 export const FOOTER_LINKS: ILink[] = [
   {
-    newWindow: true,
-    value: "linkedin",
+    value: "/.index.footer.linkedin",
     href: "https://www.linkedin.com/in/michele-de-cillis/",
   },
   {
-    newWindow: true,
-    value: "github",
+    value: "/.index.footer.github",
     href: "https://github.com/demic-dev",
   },
   {
-    newWindow: true,
-    value: "instagram",
-    href: "https://www.instagram.com/micheledecillis/",
-  },
-  // {
-  //   newWindow: true,
-  //   value: "leetcode",
-  //   href: "https://leetcode.com/demic-dev/",
-  // },
-  {
-    newWindow: true,
-    value: "email me",
+    value: "/.index.footer.email-me",
     href: "mailto:decillismicheledeveloper@gmail.com",
   },
 ];

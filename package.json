@@ -1,6 +1,6 @@
 {
   "name": "website",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -9,10 +9,17 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "date-fns": "^3.6.0",
+    "gray-matter": "^4.0.3",
+    "i18next": "^23.11.5",
     "next": "12.3.1",
+    "next-i18next": "^15.3.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-i18next": "^14.1.2",
     "react-use": "^17.4.0",
+    "remark": "^15.0.1",
+    "remark-html": "^16.0.1",
     "styled-components": "^5.3.6"
   },
   "devDependencies": {

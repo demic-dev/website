@@ -1,3 +1,5 @@
+import { UrlObject } from "url";
+
 export type LinkProps = React.ForwardRefExoticComponent<
   Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, keyof InternalLinkProps> &
     InternalLinkProps & {
@@ -7,6 +9,6 @@ export type LinkProps = React.ForwardRefExoticComponent<
 
 export interface ILink {
   value: string;
-  href: string;
-  newWindow?: boolean;
+  href: string | UrlObject;
+  locale?: false;
 }

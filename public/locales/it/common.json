@@ -1,0 +1,49 @@
+{
+    "_app": {
+        "header": {
+            "resume": "curriculum",
+            "blog": "blog",
+            "projects": "progetti",
+            "about-me": "su di me",
+            "home": "home"
+        }
+    },
+    "/": {
+        "index": {
+            "meta-description": "Scopri il mio lavoro come sviluppatore. Connettiti con me sui social e scopri di più su di me.",
+            "title": "home",
+            "hero": "ciao 👋 sono michele de cillis,<br /> sviluppatore e appassionato di <br />tecnologia",
+            "footer": {
+                "linkedin": "linkedin",
+                "github": "github",
+                "email-me": "scrivimi"
+            }
+        },
+        "about-me": {
+            "meta-description": "Conosci meglio il mio percorso e le mie competenze come sviluppatore. Esplora la mia esperienza, le mie specializzazioni e i progetti che ho realizzato.",
+            "title": "su di me",
+            "tl-dr": {
+                "title": "tl;dr",
+                "content": "<b>Ciao!</b> Sono Michele De Cillis, e benvenuti nel mio portfolio. Sono sviluppatore e appassionato di tecnologia. Sono nell'ultimo anno di una <i>Laurea Triennale in Informatica</i>, dove mi sto immergendo nella teoria avanzata e nelle migliori pratiche dell'informatica. Ho anche lavorato per quasi tre anni come sviluppatore <b>frontend</b> e <b>mobile</b>, imparando a scrivere <i>codice di qualità</i> che sia sia <b>efficiente</b> che <b>scalabile</b>. La mia filosofia è che la tecnologia dovrebbe <i>aiutare</i> le persone a <i>crescere</i> ed esprimere il loro meglio. Quando non sto imparando o creando progetti, adoro andare in bicicletta e fare escursioni."
+            },
+            "in-detail": {
+                "title": "in dettaglio",
+                "content": "Ho mosso i miei primi passi nel mondo dello <i>sviluppo software</i> durante le scuole superiori, dove ho imparato le basi dell'informatica e ho partecipato a diverse competizioni di <i>Arduino</i>. Ho anche partecipato allo sviluppo di una tombolata d'istituto, dove siamo riusciti a gestire con successo più di <i><b>1000</b></i> utenti online contemporaneamente. La nostra applicazione è stata riconosciuta dal <1>giornale nazionale</1>.<br/><br/>Successivamente, ho lavorato come ingegnere del software <2>mobile</2> e <3>frontend</3> per quasi tre anni. Ho lavorato su siti di e-commerce e siti altamente dinamici con comunicazione client-server in tempo reale e un totale di circa <i><b>200k</b></i> visite mensili. Con questa esperienza, ho sviluppato forti competenze tecniche e una grande capacità di lavorare in squadra, sia di persona che da remoto.<br/>Una delle <i>sfide</i> che ho affrontato è stata l'implementazione di un <b>microservizio</b> nel client web che permetteva all'utente di provare il prodotto in AR, prima di acquistarlo. Ho caricato il microservizio solo quando necessario, senza appesantire troppo il sito web. Inoltre, gestendolo in modo indipendente, ho evitato il <i>rerendering</i> non necessario dell'intero sito web.<br /><br />Due anni fa, ho deciso di ampliare le mie conoscenze iscrivendomi a una <4>laurea in informatica</4>, motivato dalla mia curiosità per il mondo accademico. Ho continuato a lavorare come freelance su vari progetti minori per mantenere le mie competenze nello sviluppo software.<br /><br />Durante l'anno 2023/24, per soddisfare le mie esigenze di conoscenza e networking internazionale, ho deciso di partecipare a un programma di scambio (<i>Erasmus+</i>) presso l'<5>Université Paris-Saclay</5> in Francia, che mi ha offerto l'opportunità di approfondire le mie conoscenze sul <i><6>machine learning</6></i> e di collaborare con team altamente internazionali. Questa esperienza mi ha insegnato l'importanza del lavoro di squadra e mi ha arricchito sia personalmente che professionalmente.<br /><br />Appassionato di <b><i>minimalismo digitale</i></b>, credo fermamente che la tecnologia debba servire le persone. Il mio obiettivo è costruire software <b>funzionale</b>, <b>intuitivo</b> e <b>piacevole</b> da usare, contribuendo a migliorare la vita quotidiana di chi lo usa."
+            }
+        }
+    },
+    "blog": {
+        "index": {
+            "meta-description": "",
+            "title": "post",
+            "heading": "post"
+        }
+    },
+    "projects": {
+        "index": {
+            "meta-description": "",
+            "title": "progetti",
+            "heading": "progetti"
+        }
+    }
+}

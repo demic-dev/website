@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styled, { keyframes } from "styled-components";
 
 const Container = styled.div`
@@ -7,14 +8,14 @@ const Container = styled.div`
   flex-direction: column;
 `;
 
-const HeaderWrapper = styled.div`
+const HeaderWrapper = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
 
   padding: 1.5rem 2rem;
 
-  @media (min-width: 640px) {
+  @media (min-width: 720px) {
     padding: 2.5rem 4rem;
   }
 `;
@@ -22,7 +23,7 @@ const HeaderWrapper = styled.div`
 const HeaderMenuButton = styled.button`
   font-size: 2rem;
 
-  @media (min-width: 640px) {
+  @media (min-width: 720px) {
     display: none;
   }
 `;
@@ -30,58 +31,33 @@ const HeaderMenuButton = styled.button`
 const HeaderLinksContainer = styled.div`
   display: none;
 
-  @media (min-width: 640px) {
+  @media (min-width: 720px) {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     gap: 3rem;
 
     font-size: 1.5rem;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
   }
 `;
 
-const FooterContainer = styled.div`
+const HeaderButtonContainer = styled.div`
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  gap: 3rem;
-
-  font-size: 1.5rem;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  padding: 1.5rem 2rem;
-
-  @media (min-width: 640px) {
-    gap: 6rem;
-    padding: 2.5rem 4rem;
-  }
-
-  &::-webkit-scrollbar {
-    visibility: hidden;
-  }
-`;
-
-const BodyContainer = styled.div`
-  padding: 0.5rem;
-  flex: 1;
-
-  display: flex;
   justify-content: center;
-  align-items: center;
 
-  font-size: 3rem;
-  font-weight: 600;
-  text-align: center;
+  gap: 1rem;
 
-  @media (min-width: 640px) {
-    font-size: 4rem;
+  & > :first-child {
+    margin-right: 1rem;
   }
 `;
 
-const ThemeSwitcherButton = styled.button`
+const ThemeSwitcherButton = styled.button<{ selected?: boolean }>`
   font-size: 2rem;
+
+  text-decoration: ${({ selected }) => (selected ? "underline" : "none")};
+  text-decoration-style: wavy;
 `;
 
 const slideFromBottom = keyframes`
@@ -97,6 +73,8 @@ const ModalContainer = styled.div`
   position: absolute;
   top: 0;
   left: 0;
+
+  z-index: 1;
 
   width: 100%;
   height: 100%;
@@ -117,7 +95,15 @@ const ModalLinksContainer = styled.div`
   align-items: flex-end;
   gap: 1.5rem;
 
-  font-size: 3rem;
+  font-size: 2.5rem;
+
+  @media screen and (min-width: 720px) {
+    font-size: 3rem;
+  }
+`;
+
+const HeaderLinks = styled.a<{ selected?: boolean }>`
+  text-decoration-style: ${({ selected }) => (selected ? "wavy" : "inherit")};
 `;
 
 export {
@@ -125,9 +111,9 @@ export {
   HeaderLinksContainer,
   HeaderWrapper,
   HeaderMenuButton,
-  FooterContainer,
-  BodyContainer,
+  HeaderButtonContainer,
   ThemeSwitcherButton,
   ModalContainer,
   ModalLinksContainer,
+  HeaderLinks,
 };
