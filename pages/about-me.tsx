@@ -100,7 +100,7 @@ const AboutMe: NextPage<{}> = () => {
                   <a
                     rel="noreferrer"
                     target="_blank"
-                    href="https://www.ped.company/"
+                    href="https://humanvsmachine.co/"
                   />
                 ),
                 4: (
