@@ -12,7 +12,7 @@ export const HEADER_LINKS: ILink[] = [
   },
   {
     value: "_app.header.resume",
-    href: "/static/resume.pdf",
+    href: "https://raw.githubusercontent.com/demic-dev/cv/refs/heads/main/michele-de-cillis_cv.pdf",
     locale: false,
   },
   // {
