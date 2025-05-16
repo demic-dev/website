@@ -1,4 +1,4 @@
-{ stdenv, hugo, paper-mod }:
+{ stdenv, hugo, terminal }:
 stdenv.mkDerivation {
   name = "demic.dev website";
 
@@ -8,7 +8,7 @@ stdenv.mkDerivation {
   buildPhase = ''
     cp -r $src/* .
     mkdir -p ./themes/terminal
-    cp -r ${paper-mod}/* ./themes/terminal/
+    cp -r ${terminal}/* ./themes/terminal/
     ${hugo}/bin/hugo
   '';
 
