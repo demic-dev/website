@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tests on Michele De Cillis | Portfolio</title>
+    <link>//localhost:1313/test/</link>
+    <description>Recent content in Tests on Michele De Cillis | Portfolio</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 16 May 2025 11:29:30 +0200</lastBuildDate>
+    <atom:link href="//localhost:1313/test/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Test</title>
+      <link>//localhost:1313/test/test/</link>
+      <pubDate>Fri, 16 May 2025 11:29:30 +0200</pubDate>
+      <guid>//localhost:1313/test/test/</guid>
+      <description>&lt;p&gt;let&amp;rsquo;s see if it works now&amp;hellip;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

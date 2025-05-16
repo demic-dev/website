@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Michele De Cillis | Portfolio</title>
+    <link>//localhost:1313/</link>
+    <description>Recent content on Michele De Cillis | Portfolio</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 15 May 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Now</title>
+      <link>//localhost:1313/now/</link>
+      <pubDate>Thu, 15 May 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/now/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;This is a &lt;code&gt;/now&lt;/code&gt; page, inspired by &lt;a href=&#34;https://sive.rs/nowff&#34;&gt;Derek Sivers&lt;/a&gt;.&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;I am currently in my third year of Computer Science Bachelor, at University of Milan. This means that I will be an undergraduate soon. Less than a year.&lt;/p&gt;&#xA;&lt;h2 id=&#34;projects-i-am-involved-in&#34;&gt;Projects I am involved in&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;With my awesome team, the 7th of May we won University Startup Challenge hackaton. This means that we got a spot for FondazioneUnimi&amp;rsquo;s incubator. Another challenge begins. Cannot wait to see where it bring us! Check out &lt;a href=&#34;https://polyneta.com&#34;&gt;Polyneta&lt;/a&gt;!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>About</title>
+      <link>//localhost:1313/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/about/</guid>
+      <description>&lt;h1 id=&#34;tldr&#34;&gt;tl;dr&lt;/h1&gt;&#xA;&lt;p&gt;&lt;strong&gt;Ciao!&lt;/strong&gt; I&amp;rsquo;m Michele De Cillis, and welcome to my portfolio.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;m a software engineer and a tech enthusiast. In my final year of BSc in CS, I am deep diving into advanced theory and best practices in CS. I also have almost three years of work experience in frontend and mobile development. I learnt to write &lt;em&gt;quality code&lt;/em&gt; that is both &lt;strong&gt;efficient&lt;/strong&gt; and &lt;strong&gt;scalable&lt;/strong&gt;. I think that technology should &lt;em&gt;help&lt;/em&gt; people to &lt;em&gt;grow&lt;/em&gt; and express their best.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Contact</title>
+      <link>//localhost:1313/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/contact/</guid>
+      <description>&lt;p&gt;Reach me or check out my social profiles here:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;LinkedIn: &lt;a href=&#34;https://www.linkedin.com/in/michele-de-cillis/&#34;&gt;https://www.linkedin.com/in/michele-de-cillis/&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;GitHub: &lt;a href=&#34;https://github.com/demic-dev&#34;&gt;https://github.com/demic-dev&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Mail: &lt;a href=&#34;mailto:decillismicheledeveloper@gmail.com&#34;&gt;decillismicheledeveloper@gmail.com&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>
