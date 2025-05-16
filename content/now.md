@@ -8,7 +8,7 @@ description = "What I've been up to lately? Last updated: 15th of May"
 
 > This is a `/now` page, inspired by [Derek Sivers](https://sive.rs/nowff).
 
-I am currently in my third year of Computer Science Bachelor, at University of Milan. This means that I will be an undergraduate soon. Less than a year.
+I am currently in my third year of Computer Science Bachelor, at University of Milan. This means that in less than a year I will be a Bachelor Graduate. Can't wait!
 
 ## Projects I am involved in
 
