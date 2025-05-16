@@ -12,7 +12,7 @@ pagination.pagerSize = 5
 [params]
   # dir name of your main content (default is `content/posts`).
   # the list of set content will show up on your index page (baseurl).
-  contentTypeName = "about"
+  contentTypeName = "posts"
 
   # if you set this to 0, only submenu trigger will be visible
   showMenuItems = 10
@@ -102,11 +102,11 @@ pagination.pagerSize = 5
         #   name = "Posts"
         #   url = "/posts"
         #   weight = 3
-        # [[languages.en.menu.main]]
-        #   identifier = "projects"
-        #   name = "Projects"
-        #   url = "/projects"
-        #   weight = 4
+        [[languages.en.menu.main]]
+          identifier = "github"
+          name = "GitHub"
+          url = "https://github.com/demic-dev"
+          weight = 4
         [[languages.en.menu.main]]
           identifier = "contact"
           name = "Contact"
@@ -116,4 +116,9 @@ pagination.pagerSize = 5
           identifier = "resume"
           name = "Resume"
           url = "https://raw.githubusercontent.com/demic-dev/cv/refs/heads/main/michele-de-cillis_cv.pdf"
+          weight = 6
+        [[languages.en.menu.main]]
+          identifier = "rss"
+          name = "RSS"
+          url = "/index.xml"
           weight = 6
