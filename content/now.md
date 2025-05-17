@@ -26,7 +26,7 @@ I am currently in my third year of Computer Science Bachelor, at University of M
 
     * [Careless People](https://en.wikipedia.org/wiki/Careless_People)
     * [Harry Potter](https://en.wikipedia.org/wiki/Harry_Potter)
-    *    [Sapiens](https://en.wikipedia.org/wiki/Sapiens:_A_Brief_History_of_Humankind)
+    * [Sapiens](https://en.wikipedia.org/wiki/Sapiens:_A_Brief_History_of_Humankind)
 
 ---
 
