@@ -115,7 +115,7 @@ pagination.pagerSize = 5
         [[languages.en.menu.main]]
           identifier = "resume"
           name = "Resume"
-          url = "https://raw.githubusercontent.com/demic-dev/cv/refs/heads/main/michele-de-cillis_cv.pdf"
+          url = "/resume"
           weight = 6
         [[languages.en.menu.main]]
           identifier = "rss"
