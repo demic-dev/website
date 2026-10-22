@@ -4,7 +4,7 @@ Toc = false
 +++
 # TL;DR
 
-__Ciao!__ My name is Michele De Cillis, this is my website. I am a __software engineer__ and a __tech entusiast__.
+__Ciao!__ My name is Michele De Cillis, this is my website. I am a __software engineer__ and a __tech enthusiast__.
 
 Based in Milan, I am in my final year of BSc in Computer Science, where I am deep diving into advanced theory and best practices in CS. I also have almost three years of work experience in frontend and mobile development. I learnt to write _quality code_ that is both __efficient__ and __scalable__.
 
